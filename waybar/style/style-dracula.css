@@ -1,0 +1,42 @@
+@import url("./style/colors-hamoni.css");
+* {
+    border: none;
+    border-radius: 4;
+    font-family: Hack Nerd Font;
+    font-size: 11pt;
+    min-height: 0;
+}
+window#waybar {
+    opacity: 0.9;
+    background: @indigo;
+    color: @lavender;
+    border-bottom: 0px solid @plum;
+}
+#workspaces button {
+    padding: 4px;
+    background: @background;
+    color: @pink;
+}
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background-image: linear-gradient(0deg, @selection, @thistle);
+}
+#workspaces button.active {
+    background-image: linear-gradient(0deg, @purple, @selection);
+}
+#workspaces button.urgent {
+    background-image: linear-gradient(0deg, @red, @background-darker);
+}
+#taskbar button.active {
+    background-image: linear-gradient(0deg, @selection, @violet);
+}
+#clock {
+    padding: 0 4px;
+    background: @indigo;
+}
+#idle_inhibitor {
+  border-radius: 6px;
+  margin: 0px 1px;
+  padding: 1px 2px;
+}

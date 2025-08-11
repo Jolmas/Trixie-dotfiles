@@ -1,0 +1,126 @@
+[32mautotiling[0m/stable 1.9.3-1 all
+  automatically switch the window split orientation in sway and i3
+
+[32mazote[0m/stable 1.14.1-1 all
+  wallpaper manager for wlroots-based compositors and some other WMs
+
+[32mgolang-github-dlasky-gotk3-layershell-dev[0m/stable 0.0~git20230801.b0c42cd-2 all
+  gotk3 addon module that provides gtk_layer_shell compatibiility (library)
+
+[32mgolang-github-joshuarubin-go-sway-dev[0m/stable 1.2.0-2 all
+  Sway client for Go (library)
+
+[32mgrimshot[0m/stable 1.10.1-1 all
+  Easy to use screenshot tool for sway
+
+[32mgtkgreet[0m/stable 0.8-1+b1 amd64
+  GTK based greeter for greetd
+
+[32mgtklock[0m/stable 4.0.0-1 amd64
+  GTK-based lockscreen for wayland
+
+[32mimpass[0m/stable 0.14.1-1 all
+  Simple and secure password management and retrieval system
+
+[32mkeyd-application-mapper[0m/stable 2.5.0-4 all
+  keyboard key remapping daemon - application-specific remapper
+
+[32mlibrust-swayipc-dev[0m/stable 3.0.3-1 amd64
+  Controlling sway through its IPC interface - Rust source code
+
+[32mlibrust-swayipc-types-dev[0m/stable 1.3.2-1 amd64
+  Library containing Type defintions from sway's IPC interface - Rust source code
+
+[32mlibrust-swtchr-dev[0m/stable 0.1.2-6+b4 amd64
+  Gnome-style window switcher for the Sway window manager - Rust source code
+
+[32mnwg-bar[0m/stable 0.1.6-1+b9 amd64
+  GTK3-based button bar for wlroots-based compositors (program)
+
+[32mnwg-clipman[0m/stable 0.2.4-1 all
+  GTK3-based GUI for cliphist
+
+[32mnwg-displays[0m/stable 0.3.20-2 all
+  output management utility for Wayland compositors like Sway
+
+[32mnwg-hello[0m/stable 0.3.0-1 amd64
+  GTK3-based greeter for the greetd daemon
+
+[32mnwg-look[0m/stable 1.0.2-1+b3 amd64
+  GTK3 settings editor for wlroots environments like Sway
+
+[32mpapersway[0m/stable 2.001-1 all
+  PaperWM-like scollable tiling window management for Sway/i3wm
+
+[32mpocket-reform-handbook[0m/stable 2025-03-16+dfsg-2 all
+  MNT Pocket Reform Operator Handbook
+
+[32mpython3-i3ipc[0m/stable 2.2.1-3 all
+  Python library to control i3wm and sway
+
+[32mreform-handbook[0m/stable 2025-04-30+dfsg-2 all
+  MNT Reform Operator Handbook
+
+[32mshotman[0m/stable 0.4.7-4 amd64
+  uncompromising screenshot GUI for Wayland compositors
+
+[32mswappy[0m/stable 1.5.1-2 amd64
+  Wayland native snapshot and editor tool
+
+[32msway[0m/stable 1.10.1-2 amd64
+  i3-compatible Wayland compositor
+
+[32msway-backgrounds[0m/stable 1.10.1-2 all
+  Set of backgrounds packaged with the sway window manager
+
+[32msway-notification-center[0m/stable 0.11.0-1 amd64
+  simple notification daemon for sway
+
+[32mswaybg[0m/stable,now 1.2.1-1 amd64 [instalado]
+  Wallpaper utility for Wayland compositors
+
+[32mswayidle[0m/stable 1.8.0-1 amd64
+  Idle management daemon for Wayland
+
+[32mswayimg[0m/stable 3.8-1+b1 amd64
+  image viewer for Sway/Wayland
+
+[32mswaykbdd[0m/stable 1.1-1+b1 amd64
+  Per-window keyboard layout switching daemon for Sway
+
+[32mswaylock[0m/stable,now 1.8.2-1 amd64 [instalado]
+  Screen locker for Wayland
+
+[32mswayosd[0m/stable 0.1.0-5 amd64
+  OSD for common actions like volume and brightness
+
+[32mswaysome[0m/stable 2.1.2-1+b4 amd64
+  Improve multi-output handling on sway
+
+[32mswtchr[0m/stable 0.1.2-6+b4 amd64
+  Gnome-style window switcher for sway
+
+[32mtofi[0m/stable,now 0.9.1-2+b1 amd64 [instalado]
+  fast and simple dmenu / rofi replacement for wlroots-based Wayland compositors
+
+[32mwaybar[0m/stable,now 0.12.0-1 amd64 [instalado]
+  Highly customizable Wayland bar for Sway and Wlroots based compositors
+
+[32mwdisplays[0m/stable 1.1.1-1+b2 amd64
+  graphical application for configuring displays in Wayland compositors
+
+[32mwl-mirror[0m/stable 0.17.0-1 amd64
+  output-mirroring tool for wlroots-based Wayland desktops
+
+[32mwlgreet[0m/stable 0.5.0-3 amd64
+  raw wayland greeter for greetd
+
+[32mwlsunset[0m/stable,now 0.3.0-1 amd64 [instalado]
+  Day/night gamma adjustments for Wayland
+
+[32mwmenu[0m/stable 0.1.9-2 amd64
+  efficient dynamic menu for wlroots based Wayland compositors
+
+[32mwofi[0m/stable,now 1.4.1-1+b2 amd64 [instalado]
+  application launcher for wlroots based wayland compositors
+

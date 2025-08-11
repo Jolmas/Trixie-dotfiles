@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+<menu id="root-menu" label="root-menu">
+    <item label="Terminal" icon="konsole">
+      <action name="Execute"><command>foot</command></action>
+    </item>
+	<item label="Archivos" icon="org.kde.dolphin">
+      <action name="Execute"><command>thunar</command></action>
+    </item>
+  <separator />
+  <menu id="Accessories" label="Accesorios" icon="applications-accessories">
+    <item label="Acerca de Xfce" icon="org.xfce.about">
+      <action name="Execute"><command>xfce4-about</command></action>
+    </item>
+    <item label="Administrador de archivos Thunar" icon="org.xfce.thunar">
+      <action name="Execute"><command>thunar</command></action>
+    </item>
+    <item label="Azote" icon="azote">
+      <action name="Execute"><command>azote</command></action>
+    </item>
+    <item label="Buscador de aplicaciones" icon="org.xfce.appfinder">
+      <action name="Execute"><command>xfce4-appfinder</command></action>
+    </item>
+    <item label="Cambio de nombre en masa" icon="org.xfce.thunar">
+      <action name="Execute"><command>thunar --bulk-rename</command></action>
+    </item>
+    <item label="Captura de pantalla" icon="org.xfce.screenshooter">
+      <action name="Execute"><command>xfce4-screenshooter</command></action>
+    </item>
+    <item label="Ejecutar el programa..." icon="org.xfce.appfinder">
+      <action name="Execute"><command>xfce4-appfinder --collapsed</command></action>
+    </item>
+    <item label="Emulador de terminal" icon="org.xfce.terminalemulator">
+      <action name="Execute"><command>exo-open --launch TerminalEmulator</command></action>
+    </item>
+    <item label="Fcitx 5" icon="fcitx">
+      <action name="Execute"><command>/usr/bin/fcitx5</command></action>
+    </item>
+    <item label="FSearch" icon="io.github.cboxdoerfer.FSearch">
+      <action name="Execute"><command>fsearch</command></action>
+    </item>
+    <item label="Gestor de archivos" icon="org.xfce.filemanager">
+      <action name="Execute"><command>exo-open --launch FileManager</command></action>
+    </item>
+    <item label="Gestor de tareas" icon="org.xfce.taskmanager">
+      <action name="Execute"><command>xfce4-taskmanager</command></action>
+    </item>
+    <item label="Gestor del portapapeles" icon="xfce4-clipman-plugin">
+      <action name="Execute"><command>xfce4-clipman</command></action>
+    </item>
+    <item label="Keyboard layout viewer" icon="input-keyboard">
+      <action name="Execute"><command>kbd-layout-viewer5</command></action>
+    </item>
+    <item label="LibreOffice" icon="libreoffice-startcenter">
+      <action name="Execute"><command>libreoffice</command></action>
+    </item>
+    <item label="Micro" icon="/usr/share/micro/micro-logo-mark.svg">
+      <action name="Execute"><command>foot 'micro'</command></action>
+    </item>
+    <item label="Midnight Commander" icon="MidnightCommander">
+      <action name="Execute"><command>foot 'mc'</command></action>
+    </item>
+    <item label="Midnight Commander editor" icon="MidnightCommander">
+      <action name="Execute"><command>foot 'mcedit'</command></action>
+    </item>
+    <item label="Mousepad" icon="org.xfce.mousepad">
+      <action name="Execute"><command>mousepad</command></action>
+    </item>
+    <item label="Notas" icon="org.xfce.notes">
+      <action name="Execute"><command>xfce4-notes</command></action>
+    </item>
+    <item label="Thai X terminal" icon="xiterm+thai">
+      <action name="Execute"><command>txiterm -ls -cursorColor yellow -cursorColorThai red -bg black -fg white</command></action>
+    </item>
+    <item label="Visor de los sensores" icon="xfce-sensors">
+      <action name="Execute"><command>xfce4-sensors</command></action>
+    </item>
+    <item label="Xarchiver" icon="xarchiver">
+      <action name="Execute"><command>xarchiver</command></action>
+    </item>
+  </menu> <!-- Accessories -->
+  <menu id="Settings" label="Configuración" icon="preferences-desktop">
+    <item label="Accesibilidad" icon="org.xfce.settings.accessibility">
+      <action name="Execute"><command>xfce4-accessibility-settings</command></action>
+    </item>
+    <item label="Ajustes de KDE Connect" icon="kdeconnect">
+      <action name="Execute"><command>kdeconnect-settings</command></action>
+    </item>
+    <item label="Ajustes del gestor de ventanas" icon="org.xfce.xfwm4-tweaks">
+      <action name="Execute"><command>xfwm4-tweaks-settings</command></action>
+    </item>
+    <item label="Apariencia" icon="org.xfce.settings.appearance">
+      <action name="Execute"><command>xfce4-appearance-settings</command></action>
+    </item>
+    <item label="Aplicaciones predeterminadas" icon="org.xfce.settings.default-applications">
+      <action name="Execute"><command>xfce4-mime-settings</command></action>
+    </item>
+    <item label="Azote" icon="azote">
+      <action name="Execute"><command>azote</command></action>
+    </item>
+    <item label="Configuración de impresión" icon="printer">
+      <action name="Execute"><command>system-config-printer</command></action>
+    </item>
+    <item label="Configuración de red avanzada" icon="preferences-system-network">
+      <action name="Execute"><command>nm-connection-editor</command></action>
+    </item>
+    <item label="Configuración del editor de texto" icon="org.xfce.mousepad">
+      <action name="Execute"><command>mousepad --preferences</command></action>
+    </item>
+    <item label="Configuración del gestor del portapapeles" icon="xfce4-clipman-plugin">
+      <action name="Execute"><command>xfce4-clipman-settings</command></action>
+    </item>
+    <item label="Configuración del terminal de Xfce" icon="org.xfce.terminal-settings">
+      <action name="Execute"><command>xfce4-terminal --preferences</command></action>
+    </item>
+    <item label="Control de volumen" icon="multimedia-volume-control">
+      <action name="Execute"><command>pavucontrol</command></action>
+    </item>
+    <item label="Dispositivos y soportes extraíbles" icon="org.xfce.volman">
+      <action name="Execute"><command>thunar-volman-settings</command></action>
+    </item>
+    <item label="Editor de configuración" icon="org.xfce.settings.editor">
+      <action name="Execute"><command>xfce4-settings-editor</command></action>
+    </item>
+    <item label="Escritorio" icon="org.xfce.xfdesktop">
+      <action name="Execute"><command>xfdesktop-settings</command></action>
+    </item>
+    <item label="Fcitx 5 Configuration" icon="fcitx">
+      <action name="Execute"><command>/usr/bin/fcitx5-configtool</command></action>
+    </item>
+    <item label="Fcitx 5 Migration Wizard" icon="fcitx">
+      <action name="Execute"><command>fcitx5-migrator</command></action>
+    </item>
+    <item label="Gestor de configuración" icon="org.xfce.settings.manager">
+      <action name="Execute"><command>xfce4-settings-manager</command></action>
+    </item>
+    <item label="Gestor de energía" icon="org.xfce.powermanager">
+      <action name="Execute"><command>xfce4-power-manager-settings</command></action>
+    </item>
+    <item label="Gestor de paquetes Synaptic" icon="synaptic">
+      <action name="Execute"><command>synaptic-pkexec</command></action>
+    </item>
+    <item label="Gestor de ventanas" icon="org.xfce.xfwm4">
+      <action name="Execute"><command>xfwm4-settings</command></action>
+    </item>
+    <item label="Input Method" icon="input-keyboard">
+      <action name="Execute"><command>im-config</command></action>
+    </item>
+    <item label="Input Method" icon="/usr/share/uim/pixmaps/uim-icon.png">
+      <action name="Execute"><command>uim-pref-gtk3</command></action>
+    </item>
+    <item label="Labwc Config" icon="labwc-tweaks-gtk">
+      <action name="Execute"><command>labwc-tweaks-gtk</command></action>
+    </item>
+    <item label="Mozc Setup" icon="/usr/share/icons/mozc/product_icon_32bpp-128.png">
+      <action name="Execute"><command>/usr/lib/mozc/mozc_tool --mode=config_dialog</command></action>
+    </item>
+    <item label="Notificaciones" icon="org.xfce.notification">
+      <action name="Execute"><command>xfce4-notifyd-config</command></action>
+    </item>
+    <item label="Panel" icon="org.xfce.panel">
+      <action name="Execute"><command>xfce4-panel --preferences</command></action>
+    </item>
+    <item label="Pantalla" icon="org.xfce.settings.display">
+      <action name="Execute"><command>xfce4-display-settings</command></action>
+    </item>
+    <item label="Perfiles de color" icon="org.xfce.settings.color">
+      <action name="Execute"><command>xfce4-color-settings</command></action>
+    </item>
+    <item label="Preferencias de IBus" icon="ibus-setup">
+      <action name="Execute"><command>ibus-setup</command></action>
+    </item>
+    <item label="Preferencias de Thunar" icon="org.xfce.thunar">
+      <action name="Execute"><command>thunar-settings</command></action>
+    </item>
+    <item label="Preferencias del sistema" icon="preferences-system">
+      <action name="Execute"><command>systemsettings</command></action>
+    </item>
+    <item label="Preferencias del sistema de KDE" icon="preferences-system">
+      <action name="Execute"><command>systemsettings</command></action>
+    </item>
+    <item label="Ratón y panel táctil" icon="org.xfce.settings.mouse">
+      <action name="Execute"><command>xfce4-mouse-settings</command></action>
+    </item>
+    <item label="Sesión e inicio" icon="org.xfce.session">
+      <action name="Execute"><command>xfce4-session-settings</command></action>
+    </item>
+    <item label="Teclado" icon="org.xfce.settings.keyboard">
+      <action name="Execute"><command>xfce4-keyboard-settings</command></action>
+    </item>
+    <item label="Áreas de trabajo" icon="org.xfce.workspaces">
+      <action name="Execute"><command>xfwm4-workspace-settings</command></action>
+    </item>
+  </menu> <!-- Settings -->
+  <menu id="Development" label="Desarrollo" icon="applications-development">
+    <item label="Icon Browser" icon="yad">
+      <action name="Execute"><command>yad-icon-browser</command></action>
+    </item>
+    <item label="Micro" icon="/usr/share/micro/micro-logo-mark.svg">
+      <action name="Execute"><command>foot 'micro'</command></action>
+    </item>
+  </menu> <!-- Development -->
+  <menu id="Graphics" label="Gráficos" icon="applications-graphics">
+    <item label="ImageMagick (color depth=q16)" icon="display-im7.q16">
+      <action name="Execute"><command>/usr/bin/display-im7.q16 -nostdin</command></action>
+    </item>
+    <item label="LibreOffice Draw" icon="libreoffice-draw">
+      <action name="Execute"><command>libreoffice --draw</command></action>
+    </item>
+    <item label="Visor de imágenes Ristretto" icon="org.xfce.ristretto">
+      <action name="Execute"><command>ristretto</command></action>
+    </item>
+  </menu> <!-- Graphics -->
+  <menu id="Internet" label="Internet" icon="applications-internet">
+    <item label="Configuración de red avanzada" icon="preferences-system-network">
+      <action name="Execute"><command>nm-connection-editor</command></action>
+    </item>
+    <item label="Firefox ESR" icon="firefox-esr">
+      <action name="Execute"><command>/usr/lib/firefox-esr/firefox-esr</command></action>
+    </item>
+    <item label="Indicador de KDE Connect" icon="kdeconnect">
+      <action name="Execute"><command>kdeconnect-indicator</command></action>
+    </item>
+    <item label="KDE Connect" icon="kdeconnect">
+      <action name="Execute"><command>kdeconnect-app</command></action>
+    </item>
+    <item label="Lector de correo" icon="org.xfce.mailreader">
+      <action name="Execute"><command>exo-open --launch MailReader</command></action>
+    </item>
+    <item label="Navegador web" icon="org.xfce.webbrowser">
+      <action name="Execute"><command>exo-open --launch WebBrowser</command></action>
+    </item>
+    <item label="SMS de KDE Connect" icon="kdeconnect">
+      <action name="Execute"><command>kdeconnect-sms</command></action>
+    </item>
+  </menu> <!-- Internet -->
+  <menu id="Multimedia" label="Multimedia" icon="applications-multimedia">
+    <item label="Audacious" icon="audacious">
+      <action name="Execute"><command>audacious</command></action>
+    </item>
+    <item label="Control de volumen" icon="multimedia-volume-control">
+      <action name="Execute"><command>pavucontrol</command></action>
+    </item>
+    <item label="mpv Media Player" icon="mpv">
+      <action name="Execute"><command>mpv --player-operation-mode=pseudo-gui --</command></action>
+    </item>
+    <item label="Ncmpcpp">
+      <action name="Execute"><command>foot 'ncmpcpp'</command></action>
+    </item>
+    <item label="Reproductor multimedia Parole" icon="org.xfce.parole">
+      <action name="Execute"><command>parole</command></action>
+    </item>
+  </menu> <!-- Multimedia -->
+  <menu id="Office" label="Oficina" icon="applications-office">
+    <item label="Diccionario" icon="org.xfce.Dictionary">
+      <action name="Execute"><command>xfce4-dict</command></action>
+    </item>
+    <item label="ghostwriter" icon="ghostwriter">
+      <action name="Execute"><command>ghostwriter</command></action>
+    </item>
+    <item label="LibreOffice" icon="libreoffice-startcenter">
+      <action name="Execute"><command>libreoffice</command></action>
+    </item>
+    <item label="LibreOffice Calc" icon="libreoffice-calc">
+      <action name="Execute"><command>libreoffice --calc</command></action>
+    </item>
+    <item label="LibreOffice Draw" icon="libreoffice-draw">
+      <action name="Execute"><command>libreoffice --draw</command></action>
+    </item>
+    <item label="LibreOffice Impress" icon="libreoffice-impress">
+      <action name="Execute"><command>libreoffice --impress</command></action>
+    </item>
+    <item label="LibreOffice Math" icon="libreoffice-math">
+      <action name="Execute"><command>libreoffice --math</command></action>
+    </item>
+    <item label="LibreOffice Writer" icon="libreoffice-writer">
+      <action name="Execute"><command>libreoffice --writer</command></action>
+    </item>
+    <item label="Visor documental Atril" icon="atril">
+      <action name="Execute"><command>atril</command></action>
+    </item>
+  </menu> <!-- Office -->
+  <menu id="System" label="Sistema" icon="applications-system">
+    <item label="Accesibilidad" icon="org.xfce.settings.accessibility">
+      <action name="Execute"><command>xfce4-accessibility-settings</command></action>
+    </item>
+    <item label="Administrador de archivos Thunar" icon="org.xfce.thunar">
+      <action name="Execute"><command>thunar</command></action>
+    </item>
+    <item label="Aplicaciones predeterminadas" icon="org.xfce.settings.default-applications">
+      <action name="Execute"><command>xfce4-mime-settings</command></action>
+    </item>
+    <item label="BleachBit" icon="bleachbit">
+      <action name="Execute"><command>bleachbit</command></action>
+    </item>
+    <item label="BleachBit (as root)" icon="bleachbit">
+      <action name="Execute"><command>pkexec bleachbit</command></action>
+    </item>
+    <item label="btop++" icon="btop">
+      <action name="Execute"><command>foot 'btop'</command></action>
+    </item>
+    <item label="Cerrar sesión" icon="xfsm-logout">
+      <action name="Execute"><command>xfce4-session-logout</command></action>
+    </item>
+    <item label="Configuración de impresión" icon="printer">
+      <action name="Execute"><command>system-config-printer</command></action>
+    </item>
+    <item label="Fcitx 5" icon="fcitx">
+      <action name="Execute"><command>/usr/bin/fcitx5</command></action>
+    </item>
+    <item label="Foot" icon="foot">
+      <action name="Execute"><command>foot</command></action>
+    </item>
+    <item label="Foot Client" icon="foot">
+      <action name="Execute"><command>footclient</command></action>
+    </item>
+    <item label="Foot Server" icon="foot">
+      <action name="Execute"><command>foot --server</command></action>
+    </item>
+    <item label="Gestor de paquetes Synaptic" icon="synaptic">
+      <action name="Execute"><command>synaptic-pkexec</command></action>
+    </item>
+    <item label="Gestor de tareas" icon="org.xfce.taskmanager">
+      <action name="Execute"><command>xfce4-taskmanager</command></action>
+    </item>
+    <item label="Htop" icon="htop">
+      <action name="Execute"><command>foot 'htop'</command></action>
+    </item>
+    <item label="Labwc Config" icon="labwc-tweaks-gtk">
+      <action name="Execute"><command>labwc-tweaks-gtk</command></action>
+    </item>
+    <item label="Midnight Commander" icon="MidnightCommander">
+      <action name="Execute"><command>foot 'mc'</command></action>
+    </item>
+    <item label="Sesión e inicio" icon="org.xfce.session">
+      <action name="Execute"><command>xfce4-session-settings</command></action>
+    </item>
+    <item label="Terminal de Xfce" icon="org.xfce.terminal">
+      <action name="Execute"><command>xfce4-terminal</command></action>
+    </item>
+    <item label="Thai X terminal" icon="xiterm+thai">
+      <action name="Execute"><command>txiterm -ls -cursorColor yellow -cursorColorThai red -bg black -fg white</command></action>
+    </item>
+    <item label="UXTerm" icon="mini.xterm">
+      <action name="Execute"><command>uxterm</command></action>
+    </item>
+    <item label="Visor de los sensores" icon="xfce-sensors">
+      <action name="Execute"><command>xfce4-sensors</command></action>
+    </item>
+    <item label="XTerm" icon="mini.xterm">
+      <action name="Execute"><command>xterm</command></action>
+    </item>
+  </menu> <!-- System -->
+<separator />
+   <menu id="40" label="LabWC" icon="labwc-tweaks-gtk">
+            <menu id="client-list-menu"/>
+            	<item label="Editar Ajustes" icon="systemsettings">
+              		<action name="Execute"><command>~/.config/scripts/TofiEdit.sh</command>
+              		</action>
+            	</item>
+            	<item label="Actualizar Menú" icon="systemsettings">
+              		<action name="Execute"><command>~/bin/update-lwmenu.sh</command>
+              		</action>
+            	</item>
+	    		<item label="Temas" icon="labwc-tweaks-gtk">
+    	  			<action name="Execute"><command>~/.config/scripts/LabwcTheme.sh</command></action>
+    			</item>
+	    		<item label="Tweaks" icon="labwc-tweaks-gtk">
+    	  			<action name="Execute"><command>labwc-tweaks-gtk</command></action>
+    			</item>
+            	<item label="Aplicar Ajustes" icon="labwc-tweaks-gtk"> <action name="Reconfigure"/>
+            	</item>
+     	</menu>
+            <item label="Salir" icon="session-properties">
+              <action name="Execute"><command>wlogout</command>
+              </action>
+            </item>
+</menu> <!-- root-menu -->
+</openbox_menu>

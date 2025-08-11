@@ -1,0 +1,380 @@
+{
+
+"backlight": {
+  "interval": 2,
+  "align": 0,
+  "rotate": 0,
+  "format": "{icon} {percent}%",
+  "format-icons": ["󰃞", "󰃟", "󰃠"],
+  "icon-size": 10,
+  "on-click": "",
+  "on-click-middle": "",
+  "on-click-right": "",
+  "on-update": "",
+  "on-scroll-up": "~/.config/scripts/Brightness.sh --inc",
+  "on-scroll-down": "~/.config/scripts/Brightness.sh --dec",
+  "smooth-scrolling-threshold": 1,
+},
+
+"battery": {
+  "interval": 60,
+  "align": 0,
+  "rotate": 0,
+  //"bat": "BAT1",
+  //"adapter": "ACAD",
+  "full-at": 100,
+  "design-capacity": false,
+  "states": {
+    "good": 95,
+    "warning": 30,
+    "critical": 15
+           },
+  "format": "{icon}  {capacity}%",
+  "format-charging": " {capacity}%",
+  "format-plugged": " {capacity}%",
+  "format-full": "{icon} Full",
+  "format-alt": "{icon} {time}",
+  "format-icons": ["", "", "", "", ""],
+  "format-time": "{H}h {M}min",
+  "tooltip": true,
+  "tooltip-format": "{timeTo} {power}w",
+  "on-click-middle": "~/.config/scripts/ChangeBlur.sh",
+  "on-click-right": "$HOME/.config/scripts/WofiPower.sh",
+},
+
+"bluetooth": {
+  "format": "",
+  "format-disabled": "", // an empty format will hide the module
+  "format-connected": " {num_connections}",
+  "tooltip-format": " {device_alias}",
+  "tooltip-format-connected": "{device_enumerate}",
+  "tooltip-format-enumerate-connected": " {device_alias}"
+},
+
+"cava": {
+  //"cava_config": "$HOME/.config/cava/config",
+  "framerate": 30,
+  "autosens": 1,
+  "sensitivity": 100,
+  "bars": 14,
+  "lower_cutoff_freq": 50,
+  "higher_cutoff_freq": 10000,
+  "method": "pulse",
+  "source": "auto",
+  "stereo": true,
+  "reverse": false,
+  "bar_delimiter": 0,
+  "monstercat": false,
+  "waves": false,
+  "noise_reduction": 0.77,
+  "input_delay": 2,
+  "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+  "actions": {
+      "on-click-right": "mode"
+             }
+},
+
+"clock": {
+  //"format": " {:%I:%M %p}",
+  "format": " {:%I:%M}",
+  "format-alt": " {:%I:%M   %A %d %B, %Y}",
+  "tooltip-format": "<tt><small>{calendar}</small></tt>",
+  "calendar": {
+    "mode"          : "year",
+    "mode-mon-col"  : 3,
+    "weeks-pos"     : "right",
+    "on-scroll"     : 1,
+    "format": {
+	"months":     "<span color='#ffead3'><b>{}</b></span>",
+    "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+    "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+    "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+    "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+              }
+              }
+},
+
+"cpu": {
+  "format": "{usage}% ",
+  "interval": 1,
+  "format-alt-click": "click",
+  "format-alt": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% ",
+  "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+  "on-click-right": "foot htop",
+},
+
+"disk": {
+  "interval": 30,
+  //"format": "󰋊",
+  "path": "/",
+  //"format-alt-click": "click",
+  "format": "{percentage_used}% 󰋊",
+  //"tooltip": true,
+  "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)",
+},
+
+"labwc/language": {
+  "format": "Lang: {}",
+  "format-en": "US",
+  "format-tr": "Korea",
+  "keyboard-name": "at-translated-set-2-keyboard",
+  "on-click": "hyprctl switchxkblayout $SET_KB next"
+},
+
+"labwc/submap": {
+  "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
+  "tooltip": false,
+},
+
+"wlr/window": {
+  "format": "{}",
+  "max-length": 360,
+  "separate-outputs": true,
+},
+
+"idle_inhibitor": {
+  "format": "{icon}",
+  "format-icons": {
+    "activated": " ",
+    "deactivated": " ",
+                  }
+},
+
+"keyboard-state": {
+  //"numlock": true,
+  "capslock": true,
+  "format": {
+    "numlock": "N {icon}",
+    "capslock": "󰪛 {icon}"
+     },
+  "format-icons": {
+    "locked": "",
+    "unlocked": ""
+    }
+},
+
+"memory": {
+  "interval": 10,
+  "format": "{used:0.1f}G  ",
+  "format-alt": "{percentage}%  ",
+  "format-alt-click": "click",
+  "tooltip": true,
+  "tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
+  "on-click-right": "foot --title btop sh -c 'btop'"
+},
+
+"network": {
+  "format": "{ifname}",
+  "format-wifi": "{essid}  ",
+  "format-ethernet": "󰈁 Wired",
+  "format-disconnected": "", //An empty format will hide the module.
+  "tooltip-format": "{ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+  "format-linked": "󰈁 {ifname} (No IP)",
+  "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+  "tooltip-format-ethernet": "{ifname} 󰈁",
+  "tooltip-format-disconnected": "󰈂 Disconnected",
+  "max-length": 50,
+},
+
+"pulseaudio": {
+  "format": "{icon}{volume}%",
+  "format-bluetooth": "{icon}  {volume} %",
+  "format-muted": "",
+  "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+  "default": ["", "", "󰕾", ""],
+  "ignored-sinks": ["Easy Effects Sink"],
+  },
+  "scroll-step": 5.0,
+  "on-click": "~/.config/scripts/Volume.sh --toggle",
+  "on-click-right": "pavucontrol -t 3",
+  "on-scroll-up": "~/.config/scripts/Volume.sh --inc",
+  "on-scroll-down": "~/.config/scripts/Volume.sh --dec",
+  "smooth-scrolling-threshold": 1,
+},
+
+"pulseaudio#microphone": {
+  "format": "{format_source}",
+  "format-source": " {volume} %",
+  "format-source-muted": "",
+  "on-click": "~/.config/scripts/Volume.sh --toggle-mic",
+  "on-click-right": "pavucontrol -t 4",
+  "on-scroll-up": "~/.config/scripts/Volume.sh --mic-inc",
+  "on-scroll-down": "~/.config/scripts/Volume.sh --mic-dec",
+  "scroll-step": 5,
+},
+
+"temperature": {
+  "interval": 10,
+  "tooltip": false,
+  "hwmon-path": "/sys/class/hwmon/hwmon1/temp2_input",
+  //"thermal-zone": 0,
+  "critical-threshold": 82,
+  "format-critical": "{temperatureC}°C {icon}",
+  "format": "{temperatureC}°C {icon}",
+  "format-icons": [""],
+  "on-click-right": "foot --title bottom sh -c 'btm'"
+},
+
+"tray": {
+  "icon-size": 16,
+  "spacing": 8,
+},
+
+"wireplumber": {
+  "format": "{icon} {volume} %",
+  "format-muted": " Mute",
+  "on-click": "~/.config/scripts/Volume.sh --toggle",
+  "on-click-right": "pavucontrol -t 3",
+  "on-scroll-up": "~/.config/scripts/Volume.sh --inc",
+  "on-scroll-down": "~/.config/scripts/Volume.sh --dec",
+  "format-icons": ["", "", "", ""],
+},
+
+"wlr/taskbar": {
+  "format": "{icon}",
+  "icon-size": 16,
+  "all-outputs": false,
+  "tooltip-format": "{title}",
+  "on-click": "minimize-raise",
+  "on-click-middle": "close",
+  "ignore-list": [
+        "wofi"
+                 ]
+},
+
+"custom/cycle_wall": {
+  "format":" ",
+  "on-click": "~/.config/scripts/WpSel.sh",
+  "on-click-right": "~/.config/scripts/GrimShot.sh --notify save screen",
+  "tooltip": true,
+  "tooltip-format": "1🖯: Fondo 3🖱: Captura: ",
+},
+
+"custom/light_dark": {
+  "format": "",
+  "on-click": "~/.config/scripts/DarkLight.sh",
+  "tooltip": false,
+},
+
+"custom/lock": {
+  "format": " ",
+  "on-click": "wlogout",
+  "on-click-right": "~/.config/scripts/LockScreen.sh",
+  "tooltip": true,
+  "tooltip-format": "1🖯: Salir 3🖱: Bloquear Pantalla",
+},
+
+"custom/menu": {
+  "format": " ",
+  "on-click": "~/.config/scripts/Wofi.sh",
+  "on-click-right": "$HOME/.config/scripts/LabwcTheme.sh",
+  "tooltip": true,
+  "tooltip-format": "1🖯: Apps 3🖱: Temas",
+},
+
+"custom/power": {
+  "format": "",
+  "tooltip": false,
+  //"on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+  "on-click": "~/.config/powermenu/powerniri.sh",
+  //"on-click-right": "~/.config/scripts/ChangeBlur.sh",
+},
+
+"custom/updater":{
+  "format": "  {}",
+  "on-click": "foot ~/bin/chupdate",
+  "tooltip": true,
+  "tooltip-format": "Actualizar Sistema",
+},
+
+"custom/clipboard":{
+  "format": " {}",
+  "on-click": "clapboard",
+  "tooltip": true,
+  "tooltip-format": "Portapapeles",
+},
+
+"custom/weather": {
+  "format": "{}",
+  "format-alt": "{alt}: {}",
+  "format-alt-click": "click",
+  "interval": 3600,
+  "return-type": "json",
+  "exec": "~/.config/scripts/wittr.sh",
+  "tooltip" : true,
+},
+
+"niri/workspaces": {
+	"format": "{icon}",
+	"all-outputs": true,
+	"format-icons": {
+		"1": "",
+		"2": "",
+		"3": "",
+		"default": "",
+		"focused": ""
+	}
+},
+
+"wlr/workspaces": {
+	"format": "{icon}",
+	"on-click": "activate",
+	"all-outputs": true,
+	"format-icons": {
+		"1": "",
+		"2": "",
+		"3": "",
+		"default": ""
+	}
+},
+
+"custom/ws1": {
+	"format": "1 {}",
+	"tooltip": true,
+	"tooltip-format": "Escritorio 1",
+	"on-click": "wtype -M ctrl -M alt -k Left -m ctrl -m alt 2> /dev/null"
+	},
+
+"custom/ws2": {
+	"format": "2 {}",
+	"tooltip": true,
+	"tooltip-format": "Escritorio 2",
+	"on-click": "wtype -M ctrl -M alt -k Right -m ctrl -m alt 2> /dev/null"
+	},
+
+"custom/ws3": {
+	"format": "3 {}",
+	"tooltip": true,
+	"tooltip-format": "Escritorio 3",
+	"on-click": "wtype -M ctrl -M alt -k Up -m ctrl -m alt 2> /dev/null"
+	},
+
+"custom/ws4": {
+	"format": "4 {}",
+	"tooltip": true,
+	"tooltip-format": "Escritorio 4",
+	"on-click": "wtype -M ctrl -M alt -k Down -m ctrl -m alt 2> /dev/null"
+	},
+
+"sway/workspaces": {
+	"disable-scroll": true,
+	"all-outputs": true,
+	"on-click": "activate",
+	"format": "{name}",
+	"format-icons": {
+		"1": "",
+		"2": "",
+		"3": "",
+		"4": "",
+		"urgent": "",
+		"focused": "",
+		"default": ""
+		},
+	}
+}

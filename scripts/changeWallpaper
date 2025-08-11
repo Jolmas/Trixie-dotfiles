@@ -1,0 +1,15 @@
+#!/bin/bash
+
+DIR=$HOME/Imágenes/Wallpapers/
+PICS=($(ls ${DIR}))
+
+RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
+
+if [[ $(pidof swaybg) ]]; then
+  pkill swaybg
+fi
+
+#change-wallpaper using swaybg
+swaybg -i ${DIR}/${RANDOMPICS} -m fill &
+
+

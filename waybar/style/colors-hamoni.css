@@ -1,0 +1,20 @@
+@define-color background-darker #0e0013;
+@define-color foreground #ffffff;
+@define-color cursor #ffffff;
+@define-color border #ffffff;
+
+@define-color background #0e0013;
+@define-color crimson #ff026e;
+@define-color pink #ffcbdc;
+@define-color plum #cca3f5;
+@define-color lightsteelblue #b7b4ec;
+@define-color lavender #d2d8f6;
+@define-color thistle #dfaeea;
+@define-color white #ffffff;
+@define-color indigo #3c0050;
+@define-color brown #8c003c;
+@define-color deeppink #ff2f76;
+@define-color darkorchid #964dde;
+@define-color mediumslateblue #7e78e2;
+@define-color cornflowerblue #7087f8;
+@define-color violet #cf8dde;

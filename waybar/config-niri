@@ -1,0 +1,35 @@
+{
+
+"include": "~/.config/waybar/modules-2",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 3,
+"margin-left": 4,
+"margin-right": 4,
+
+"modules-left": [
+	"cpu",
+	"temperature", 
+	"memory",
+	"custom/updater",
+	"niri/workspaces",
+    ],
+
+"modules-center": [
+	"wlr/taskbar",
+	],
+
+"modules-right": [
+    "custom/cycle_wall",
+	"tray",
+	"wireplumber", 
+    "clock",
+    "custom/power",
+	],
+}
