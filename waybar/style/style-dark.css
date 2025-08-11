@@ -1,10 +1,16 @@
 @import url("./style/colors-dracula.css");
-* {
-    border: none;
-    border-radius: 0;
-    font-family: Iosevka;
-    font-size: 11pt;
-    min-height: 0;
+*{
+font-family: "Hack Nerd Font";
+font-weight: normal;
+min-height: 0;
+/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+font-size: 98%;
+font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+padding: 0px;
+margin-top: 1px;
+margin-bottom: 1px;
+border: none;
+border-radius: 0;
 }
 window#waybar {
     opacity: 0.9;

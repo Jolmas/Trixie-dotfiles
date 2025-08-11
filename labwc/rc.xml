@@ -19,7 +19,7 @@
     <screenEdgeStrength>10</screenEdgeStrength>
   </resistance>
   <theme>
-    <name>Lab-Mac-Dark</name>
+    <name>Lab-MacOS-Leopard</name>
     <icon>Papirus-Dark</icon>
     <cornerRadius>8</cornerRadius>
     <font name="Noto Sans" size="11"/>
@@ -96,7 +96,7 @@
       <action name="Execute" command="audacious"/>
     </keybind>
     <keybind key="W-p">
-      <action name="Execute" command="/home/luism/.config/scripts/ScreenShot.sh"/>
+      <action name="Execute" command="wl-color-picker"/>
     </keybind>
     <keybind key="W-r">
       <action name="Execute" command="rofi -show run -prompt Ejecutar -config ~/.config/rofi/themes/runbox/config.rasi -theme ~/.config/rofi/themes/runbox/runbox-dark.rasi "/>

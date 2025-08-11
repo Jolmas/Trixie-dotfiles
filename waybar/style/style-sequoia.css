@@ -1,6 +1,6 @@
 @import url("./style/colors-mocha.css");
 *{
-font-family: "JetBrainsMono Nerd Font";
+font-family: "Hack Nerd Font";
 font-weight: bold;
 min-height: 0;
 /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
@@ -28,7 +28,7 @@ tooltip label {
   padding: 4px;
   background: transparent;
   color: white;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
   margin-right: 5px;
 }
 
@@ -69,6 +69,7 @@ tooltip label {
 #pulseaudio,
 #wireplumber,
 #custom-media,
+#custom-menu,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -77,7 +78,7 @@ tooltip label {
 #idle_inhibitor {
 	border-radius: 6px;
 	padding: 2px 2px;
-	margin: 0px 1px;
+	margin: 1px 1px;
 }
 
 #mpd {

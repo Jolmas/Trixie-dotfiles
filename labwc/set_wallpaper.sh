@@ -25,7 +25,7 @@ pkill wbg &>/dev/null
 
 # Establece el nuevo fondo de pantalla
 if [ -f "$WALLPAPER" ]; then
-    wbg -s "$WALLPAPER" & # Usa -s stretch
+    swaybg -i "$WALLPAPER" -m fill & # Usa -s stretch
 else
     echo "Error: El archivo de fondo de pantalla '$WALLPAPER' no existe."
 fi

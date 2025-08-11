@@ -33,7 +33,7 @@ gsettings set org.gnome.desktop.desktop.wm.preferences button-layout "menu:minim
 nm-applet &
 
 # Clipboard 
-clipman &
+clapboard --record &
 
 # Enable notifications. Typically GNOME/KDE application notifications go
 # through the org.freedesktop.Notifications D-Bus API and require a client such
