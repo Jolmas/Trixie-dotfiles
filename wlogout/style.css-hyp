@@ -1,0 +1,120 @@
+/* Nord Color Palette - matching Waybar theme */
+/* Polar Night: #2e3440 #3b4252 #434c5e #4c566a */
+/* Snow Storm: #d8dee9 #e5e9f0 #eceff4 */
+/* Frost: #8fbcbb #88c0d0 #81a1c1 #5e81ac */
+/* Aurora: #bf616a #d08770 #ebcb8b #a3be8c #b48ead */
+
+* {
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    transition: 10ms;
+}
+
+window {
+    font-family: "Hack Nerd Font";
+    font-size: 12pt;
+    font-weight: bold;
+    color: #e5e9f0;
+    background-color: rgba(46, 52, 64, 0.8);
+}
+
+button {
+    color: #e5e9f0;
+    font-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+    border-style: solid;
+    background-color: rgba(59, 66, 82, 0.8);
+    border: 1px solid #4c566a;
+    border-radius: 64px;
+    margin: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:focus,
+button:active {
+    background-color: #5e81ac;
+    border: 1px solid #88c0d0;
+    color: #eceff4;
+}
+
+button:hover {
+    background-color: #4c566a;
+    border: 1px solid #81a1c1;
+    color: #eceff4;
+}
+
+/* Individual button styling with Nord colors */
+#lock {
+    background-image: image(url("icons/lock2.png"));
+    background-color: rgba(143, 188, 187, 0.2);
+}
+
+#lock:focus,
+#lock:active {
+    background-color: #8fbcbb;
+    border: 2px solid #88c0d0;
+    color: #2e3440;
+}
+
+#logout {
+    background-image: image(url("icons/logout2.png"));
+    background-color: rgba(235, 203, 139, 0.2);
+}
+
+#logout:focus,
+#logout:active {
+    background-color: #ebcb8b;
+    border: 2px solid #d08770;
+    color: #2e3440;
+}
+
+#suspend {
+    background-image: image(url("icons/suspend3.png"));
+    background-color: rgba(136, 192, 208, 0.2);
+}
+
+#suspend:focus,
+#suspend:active {
+    background-color: #88c0d0;
+    border: 1px solid #81a1c1;
+    color: #2e3440;
+}
+
+#hibernate {
+    background-image: image(url("icons/suspend2.png"));
+    background-color: rgba(163, 190, 140, 0.2);
+}
+
+#hibernate:focus,
+#hibernate:active {
+    background-color: #a3be8c;
+    border: 1px solid #8fbcbb;
+    color: #2e3440;
+}
+
+#shutdown {
+    background-image: image(url("icons/shutdown3.png"));
+    background-color: rgba(191, 97, 106, 0.2);
+}
+
+#shutdown:focus,
+#shutdown:active {
+    background-color: #bf616a;
+    border: 1px solid #d08770;
+    color: #eceff4;
+}
+
+#reboot {
+    background-image: image(url("icons/reboot3.png"));
+    background-color: rgba(180, 142, 173, 0.2);
+}
+
+#reboot:focus,
+#reboot:active {
+    background-color: #b48ead;
+    border: 1px solid #8fbcbb;
+    color: #2e3440;
+}
