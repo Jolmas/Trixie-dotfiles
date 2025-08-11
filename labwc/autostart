@@ -24,8 +24,8 @@ easyeffects --gapplication-service &
 #     output eDP-1 position 0,0
 #   }
 kanshi >/dev/null 2>&1 &
-gsettings set org.gnome.desktop.interface gtk-theme "Breeze-Dark" &
-gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark" &
+/home/luism/.config/scripts/temagtk.sh >/dev/null 2>&1 &
+/home/luism/.config/scripts/temaico.sh >/dev/null 2>&1 &
 gsettings set org.gnome.desktop.desktop.wm.preferences button-layout "menu:minimize,maximize,close" &
 
 # Launch a panel such as yambar or waybar.

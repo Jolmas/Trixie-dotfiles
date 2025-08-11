@@ -27,6 +27,9 @@
     <item label="Captura de pantalla" icon="org.xfce.screenshooter">
       <action name="Execute"><command>xfce4-screenshooter</command></action>
     </item>
+    <item label="CMatrix" icon="cmatrix">
+      <action name="Execute"><command>foot 'cmatrix'</command></action>
+    </item>
     <item label="Ejecutar el programa..." icon="org.xfce.appfinder">
       <action name="Execute"><command>xfce4-appfinder --collapsed</command></action>
     </item>
@@ -68,9 +71,6 @@
     </item>
     <item label="Notas" icon="org.xfce.notes">
       <action name="Execute"><command>xfce4-notes</command></action>
-    </item>
-    <item label="Thai X terminal" icon="xiterm+thai">
-      <action name="Execute"><command>txiterm -ls -cursorColor yellow -cursorColorThai red -bg black -fg white</command></action>
     </item>
     <item label="Visor de los sensores" icon="xfce-sensors">
       <action name="Execute"><command>xfce4-sensors</command></action>
@@ -152,9 +152,6 @@
     <item label="Labwc Config" icon="labwc-tweaks-gtk">
       <action name="Execute"><command>labwc-tweaks-gtk</command></action>
     </item>
-    <item label="Mozc Setup" icon="/usr/share/icons/mozc/product_icon_32bpp-128.png">
-      <action name="Execute"><command>/usr/lib/mozc/mozc_tool --mode=config_dialog</command></action>
-    </item>
     <item label="Notificaciones" icon="org.xfce.notification">
       <action name="Execute"><command>xfce4-notifyd-config</command></action>
     </item>
@@ -212,6 +209,9 @@
     </item>
   </menu> <!-- Graphics -->
   <menu id="Internet" label="Internet" icon="applications-internet">
+    <item label="Cliente de correo Thunderbird" icon="thunderbird">
+      <action name="Execute"><command>/usr/bin/thunderbird</command></action>
+    </item>
     <item label="Configuración de red avanzada" icon="preferences-system-network">
       <action name="Execute"><command>nm-connection-editor</command></action>
     </item>
@@ -338,17 +338,8 @@
     <item label="Terminal de Xfce" icon="org.xfce.terminal">
       <action name="Execute"><command>xfce4-terminal</command></action>
     </item>
-    <item label="Thai X terminal" icon="xiterm+thai">
-      <action name="Execute"><command>txiterm -ls -cursorColor yellow -cursorColorThai red -bg black -fg white</command></action>
-    </item>
-    <item label="UXTerm" icon="mini.xterm">
-      <action name="Execute"><command>uxterm</command></action>
-    </item>
     <item label="Visor de los sensores" icon="xfce-sensors">
       <action name="Execute"><command>xfce4-sensors</command></action>
-    </item>
-    <item label="XTerm" icon="mini.xterm">
-      <action name="Execute"><command>xterm</command></action>
     </item>
   </menu> <!-- System -->
 <separator />

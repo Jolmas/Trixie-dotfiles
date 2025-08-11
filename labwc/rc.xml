@@ -20,7 +20,7 @@
   </resistance>
   <theme>
     <name>Lab-MacOS-Leopard</name>
-    <icon>Papirus-Dark</icon>
+    <icon>WhiteSur-light</icon>
     <cornerRadius>8</cornerRadius>
     <font name="Noto Sans" size="11"/>
     <keppBorder>yes</keppBorder>

@@ -32,6 +32,7 @@ menu(){
   printf "12. tahoe-dark\n"
   printf "13. nord\n"
   printf "14. evergreen\n"
+  printf "15. sequoia\n"
 
 }
 
@@ -112,6 +113,11 @@ main() {
         14)
 	        ln -sf $THEMES/style-evergreen.css "$HOME/.config/waybar/style.css"
     	    ln -sf $THEMES/style-evergreen.css "$HOME/.config/waybar/style-default.css"
+			restart
+            ;;
+        15)
+	        ln -sf $THEMES/style-sequoia.css "$HOME/.config/waybar/style.css"
+    	    ln -sf $THEMES/style-sequoia.css "$HOME/.config/waybar/style-default.css"
 			restart
             ;;
         *)

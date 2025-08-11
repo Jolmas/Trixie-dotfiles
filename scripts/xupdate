@@ -1,0 +1,179 @@
+#!/bin/bash
+# xupdate - originally xDaily from the Peppermint distro.
+# Adapted to lilidog use by sleekmason 11-21-2022
+Green='\033[0;32m'        # Green
+CO='\033[0m'       # Text Reset
+
+if : >/dev/tcp/8.8.8.8/53; then
+PROGNAME="xupdate"
+
+if [[ $(id -u) != 0 ]]; then
+  echo "Este script necesita permisos de root para instalar actualizaciones."
+  echo "Por favor, ingrese su contraseña."
+  sudo "$0" "$@"
+  exit 1
+fi
+
+#use the utils for the needed functions
+### Our options are going to be
+#    = "full output to the terminal, no stopping."
+# -i = "interactive"
+# -q = "interactive but suppressed output"
+OPTIND="0"
+for i in  _quiet _interactive ; do unset -v $i ; done
+
+while getopts 'iq' OPTION; do
+    case "$OPTION" in
+      i)
+	_interactive="yes"
+	echo -e "${Green}Entrando en modo interactivo para actualizar el sistema.\n Por favor tenga cuidado al hacer su selección.${CO}"
+	break
+      ;;
+
+      q)
+	_quiet="yes"
+	echo -e "${Green}Entrando en modo interactivo, sin mostrar mensajes.${CO}"
+	break
+      ;;
+
+      ?)
+	echo "Uso: $(basename ${PROGNAME}) [-i = interactivo] [-q = sin mensajes]"
+	return 1
+      ;;
+  esac
+done
+
+[ "$(which apt)" ] && PkgMgr="apt" || PkgMgr="apt"
+
+see_it() {
+	[ "$_interactive" = "yes" ] && ( read -r -n1 -p " $_msg \"Y/n\" " answ
+	[ -z "$answ" ] || [ "$answ" = "y" ] || [ "$answ" = "Y" ] && echo &&
+	do_it &&
+	echo -e "${Green}$_msg - Completado.${CO}" ||
+	echo -e "${Green}$_msg - Omitido.${CO}" )
+}
+
+no_see() {
+	[ "$_quiet" = "yes"       ] && ( read -r -n1 -p " $_msg \"Y/n\" " answ
+	[ -z "$answ" ] || [ "$answ" = "y" ] || [ "$answ" = "Y" ] && echo &&
+	do_it > /dev/null &&
+	echo -e "${Green}$_msg - Completado.${CO}" ||
+	echo -e "${Green}$_msg - Omitido.${CO}" )
+}
+
+run_it() {
+	[ "$_interactive" != "yes" ] && [ "$_quiet" != "yes" ] && (
+	echo -e "$_msg ." &&
+	do_it &&
+	echo -e "${Green}$_msg - Completado.${CO}" )
+}
+
+# Begin xDaily command functions 
+
+_update() {
+      _msg="Verificar actualizaciones en los repositorios?"
+      do_it() { 
+		[ "$_quiet" != "yes" ] &&
+		$PkgMgr update        ||
+		$PkgMgr update > /dev/null 2>&1
+}
+	see_it
+	no_see
+	run_it
+}
+
+_upgradable() {
+      _msg="Ver todos los paquetes actualizables?"
+      do_it() {
+		[ "$_quiet" != "yes" ] &&
+		$PkgMgr list --upgradable  ||
+		$PkgMgr list --upgradable > /dev/null 2>&1
+}
+	see_it
+#	no_see
+#	run_it
+}
+
+_upgrade() {
+      _msg="Instalar todos las actualizaciones disponibles?"
+      do_it() {
+		[ "$_quiet" != "yes" ] &&
+		$PkgMgr upgrade
+}
+	see_it
+	no_see
+	run_it
+}
+
+_apt_clean() {
+      _msg="Eliminar paquetes no necesarios de la cache apt?"
+      do_it() {
+		[ "$_quiet" != "yes" ] &&
+		$PkgMgr clean cache
+}
+	see_it
+	no_see
+	run_it
+}
+
+_clear_thumbnails() {
+      _msg="Limpiar la cache de miniaturas?"
+      do_it() {
+		for i in ".thumbnails" ".cache/thumbnails" ; do
+		   for j in "*/*.png" "*/*/*.png" ; do
+			[ "$_quiet" != "yes" ]  &&
+			rm -v /home/"${SUDO_USER}"/${i}/"${j}" > /dev/null 2>&1 ||
+		        rm /home/"${SUDO_USER}"/${i}/"${j}" > /dev/null 2>&1
+		   done
+		done ; true
+	      }
+	see_it
+	no_see
+	run_it
+}
+
+_ssd_trimfs() {
+      _msg="Para SSDs: Sistema de Archivos elegibles para trim ext2/3/4?"
+      do_it() {
+		for mnt in $(grep -E "(ext2|ext3|ext4)" /etc/mtab | cut -f2 -d" ")
+		    do fstrim "${mnt}" &>/dev/null &&
+			echo -e " fstrim completado para \"${mnt}\"" ||
+			echo -e " No se requiere fstrim para \"${mnt}\""
+		    done
+	      }
+        see_it
+        no_see
+        run_it
+}
+
+
+_uflatpak() {
+      _msg="Actualizar paquetes Flatpak"
+      do_it() { flatpak update 
+      	      }
+        see_it
+        no_see
+        run_it
+}
+
+ 
+_update
+_upgradable
+_upgrade
+_uflatpak
+_apt_clean
+_clear_thumbnails
+_ssd_trimfs
+
+[ "$_interactive" = "yes" ] &&
+echo
+else
+echo ""
+ echo "   ${Green}-----------------------------------------------------${CO}"
+ echo ""
+ echo "   ${Green}Sin Conexión a Internet. Por favor conectese e intente de nuevo.${CO}"
+ echo ""
+ echo "   ${Green}-----------------------------------------------------${CO}"
+echo ""
+fi
+read -r -n1 -p " Presione cualquier tecla para salir ... " answ
