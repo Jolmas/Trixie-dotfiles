@@ -109,7 +109,18 @@ _apt_clean() {
       _msg="Eliminar paquetes no necesarios de la cache apt?"
       do_it() {
 		[ "$_quiet" != "yes" ] &&
-		$PkgMgr clean cache
+		$PkgMgr clean
+}
+	see_it
+	no_see
+	run_it
+}
+
+_apt_autoremove() {
+      _msg="Eliminar dependencias no necesarias?"
+      do_it() {
+		[ "$_quiet" != "yes" ] &&
+		$PkgMgr autoremove
 }
 	see_it
 	no_see
@@ -162,6 +173,7 @@ _upgradable
 _upgrade
 _uflatpak
 _apt_clean
+_apt_autoremove
 _clear_thumbnails
 _ssd_trimfs
 
