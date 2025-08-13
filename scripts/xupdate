@@ -75,7 +75,7 @@ _update() {
       do_it() { 
 		[ "$_quiet" != "yes" ] &&
 		$PkgMgr update        ||
-		$PkgMgr update > /dev/null 2>&1
+		$PkgMgr update  2>&1 >/dev/null
 }
 	see_it
 	no_see
@@ -87,7 +87,7 @@ _upgradable() {
       do_it() {
 		[ "$_quiet" != "yes" ] &&
 		$PkgMgr list --upgradable  ||
-		$PkgMgr list --upgradable > /dev/null 2>&1
+		$PkgMgr list --upgradable 2>&1 > /dev/null 2>&1
 }
 	see_it
 #	no_see
@@ -98,7 +98,7 @@ _upgrade() {
       _msg="Instalar todos las actualizaciones disponibles?"
       do_it() {
 		[ "$_quiet" != "yes" ] &&
-		$PkgMgr upgrade
+		$PkgMgr upgrade 2>&1 >/dev/null
 }
 	see_it
 	no_see
@@ -109,7 +109,7 @@ _apt_clean() {
       _msg="Eliminar paquetes no necesarios de la cache apt?"
       do_it() {
 		[ "$_quiet" != "yes" ] &&
-		$PkgMgr clean
+		$PkgMgr clean 2>&1 >/dev/null
 }
 	see_it
 	no_see
@@ -120,7 +120,7 @@ _apt_autoremove() {
       _msg="Eliminar dependencias no necesarias?"
       do_it() {
 		[ "$_quiet" != "yes" ] &&
-		$PkgMgr autoremove
+		$PkgMgr autoremove 2>&1 >/dev/null
 }
 	see_it
 	no_see
