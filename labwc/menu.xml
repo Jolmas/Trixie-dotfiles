@@ -24,11 +24,11 @@
     <item label="Cambio de nombre en masa" icon="org.xfce.thunar">
       <action name="Execute"><command>thunar --bulk-rename</command></action>
     </item>
-    <item label="Captura de pantalla" icon="org.xfce.screenshooter">
-      <action name="Execute"><command>xfce4-screenshooter</command></action>
-    </item>
     <item label="CMatrix" icon="cmatrix">
       <action name="Execute"><command>foot 'cmatrix'</command></action>
+    </item>
+    <item label="CopyQ" icon="copyq">
+      <action name="Execute"><command>copyq --start-server show</command></action>
     </item>
     <item label="Ejecutar el programa..." icon="org.xfce.appfinder">
       <action name="Execute"><command>xfce4-appfinder --collapsed</command></action>
@@ -39,23 +39,20 @@
     <item label="Fcitx 5" icon="fcitx">
       <action name="Execute"><command>/usr/bin/fcitx5</command></action>
     </item>
+    <item label="Flatseal" icon="com.github.tchx84.Flatseal">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=com.github.tchx84.Flatseal com.github.tchx84.Flatseal</command></action>
+    </item>
+    <item label="Flatsweep" icon="io.github.giantpinkrobots.flatsweep">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=flatsweep io.github.giantpinkrobots.flatsweep</command></action>
+    </item>
     <item label="FSearch" icon="io.github.cboxdoerfer.FSearch">
       <action name="Execute"><command>fsearch</command></action>
     </item>
     <item label="Gestor de archivos" icon="org.xfce.filemanager">
       <action name="Execute"><command>exo-open --launch FileManager</command></action>
     </item>
-    <item label="Gestor de tareas" icon="org.xfce.taskmanager">
-      <action name="Execute"><command>xfce4-taskmanager</command></action>
-    </item>
-    <item label="Gestor del portapapeles" icon="xfce4-clipman-plugin">
-      <action name="Execute"><command>xfce4-clipman</command></action>
-    </item>
     <item label="Keyboard layout viewer" icon="input-keyboard">
       <action name="Execute"><command>kbd-layout-viewer5</command></action>
-    </item>
-    <item label="LibreOffice" icon="libreoffice-startcenter">
-      <action name="Execute"><command>libreoffice</command></action>
     </item>
     <item label="Micro" icon="/usr/share/micro/micro-logo-mark.svg">
       <action name="Execute"><command>foot 'micro'</command></action>
@@ -68,12 +65,6 @@
     </item>
     <item label="Mousepad" icon="org.xfce.mousepad">
       <action name="Execute"><command>mousepad</command></action>
-    </item>
-    <item label="Notas" icon="org.xfce.notes">
-      <action name="Execute"><command>xfce4-notes</command></action>
-    </item>
-    <item label="Visor de los sensores" icon="xfce-sensors">
-      <action name="Execute"><command>xfce4-sensors</command></action>
     </item>
     <item label="Xarchiver" icon="xarchiver">
       <action name="Execute"><command>xarchiver</command></action>
@@ -106,9 +97,6 @@
     </item>
     <item label="Configuración del editor de texto" icon="org.xfce.mousepad">
       <action name="Execute"><command>mousepad --preferences</command></action>
-    </item>
-    <item label="Configuración del gestor del portapapeles" icon="xfce4-clipman-plugin">
-      <action name="Execute"><command>xfce4-clipman-settings</command></action>
     </item>
     <item label="Configuración del terminal de Xfce" icon="org.xfce.terminal-settings">
       <action name="Execute"><command>xfce4-terminal --preferences</command></action>
@@ -201,11 +189,11 @@
     <item label="ImageMagick (color depth=q16)" icon="display-im7.q16">
       <action name="Execute"><command>/usr/bin/display-im7.q16 -nostdin</command></action>
     </item>
-    <item label="LibreOffice Draw" icon="libreoffice-draw">
-      <action name="Execute"><command>libreoffice --draw</command></action>
+    <item label="Programa de manipulación de imágenes de GNU" icon="gimp">
+      <action name="Execute"><command>gimp-3.0</command></action>
     </item>
-    <item label="Visor de imágenes Ristretto" icon="org.xfce.ristretto">
-      <action name="Execute"><command>ristretto</command></action>
+    <item label="Viewnior" icon="viewnior">
+      <action name="Execute"><command>viewnior</command></action>
     </item>
   </menu> <!-- Graphics -->
   <menu id="Internet" label="Internet" icon="applications-internet">
@@ -238,8 +226,14 @@
     <item label="Audacious" icon="audacious">
       <action name="Execute"><command>audacious</command></action>
     </item>
+    <item label="Cantata" icon="cantata">
+      <action name="Execute"><command>cantata</command></action>
+    </item>
     <item label="Control de volumen" icon="multimedia-volume-control">
       <action name="Execute"><command>pavucontrol</command></action>
+    </item>
+    <item label="Haruna" icon="haruna">
+      <action name="Execute"><command>haruna</command></action>
     </item>
     <item label="mpv Media Player" icon="mpv">
       <action name="Execute"><command>mpv --player-operation-mode=pseudo-gui --</command></action>
@@ -247,37 +241,25 @@
     <item label="Ncmpcpp">
       <action name="Execute"><command>foot 'ncmpcpp'</command></action>
     </item>
-    <item label="Reproductor multimedia Parole" icon="org.xfce.parole">
-      <action name="Execute"><command>parole</command></action>
+    <item label="WF Recorder GUI" icon="camera-video-symbolic">
+      <action name="Execute"><command>wf-recorder-gui</command></action>
     </item>
   </menu> <!-- Multimedia -->
   <menu id="Office" label="Oficina" icon="applications-office">
-    <item label="Diccionario" icon="org.xfce.Dictionary">
-      <action name="Execute"><command>xfce4-dict</command></action>
-    </item>
     <item label="ghostwriter" icon="ghostwriter">
       <action name="Execute"><command>ghostwriter</command></action>
     </item>
-    <item label="LibreOffice" icon="libreoffice-startcenter">
-      <action name="Execute"><command>libreoffice</command></action>
+    <item label="Katvan" icon="app.katvan.Katvan">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=katvan --file-forwarding app.katvan.Katvan @@  @@</command></action>
     </item>
-    <item label="LibreOffice Calc" icon="libreoffice-calc">
-      <action name="Execute"><command>libreoffice --calc</command></action>
-    </item>
-    <item label="LibreOffice Draw" icon="libreoffice-draw">
-      <action name="Execute"><command>libreoffice --draw</command></action>
-    </item>
-    <item label="LibreOffice Impress" icon="libreoffice-impress">
-      <action name="Execute"><command>libreoffice --impress</command></action>
-    </item>
-    <item label="LibreOffice Math" icon="libreoffice-math">
-      <action name="Execute"><command>libreoffice --math</command></action>
-    </item>
-    <item label="LibreOffice Writer" icon="libreoffice-writer">
-      <action name="Execute"><command>libreoffice --writer</command></action>
+    <item label="ONLYOFFICE" icon="org.onlyoffice.desktopeditors">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=desktopeditors --file-forwarding org.onlyoffice.desktopeditors @@u  @@</command></action>
     </item>
     <item label="Visor documental Atril" icon="atril">
       <action name="Execute"><command>atril</command></action>
+    </item>
+    <item label="Zathura" icon="org.pwmt.zathura">
+      <action name="Execute"><command>zathura</command></action>
     </item>
   </menu> <!-- Office -->
   <menu id="System" label="Sistema" icon="applications-system">
@@ -320,9 +302,6 @@
     <item label="Gestor de paquetes Synaptic" icon="synaptic">
       <action name="Execute"><command>synaptic-pkexec</command></action>
     </item>
-    <item label="Gestor de tareas" icon="org.xfce.taskmanager">
-      <action name="Execute"><command>xfce4-taskmanager</command></action>
-    </item>
     <item label="Htop" icon="htop">
       <action name="Execute"><command>foot 'htop'</command></action>
     </item>
@@ -337,9 +316,6 @@
     </item>
     <item label="Terminal de Xfce" icon="org.xfce.terminal">
       <action name="Execute"><command>xfce4-terminal</command></action>
-    </item>
-    <item label="Visor de los sensores" icon="xfce-sensors">
-      <action name="Execute"><command>xfce4-sensors</command></action>
     </item>
   </menu> <!-- System -->
 <separator />
@@ -359,7 +335,8 @@
 	    		<item label="Tweaks" icon="labwc-tweaks-gtk">
     	  			<action name="Execute"><command>labwc-tweaks-gtk</command></action>
     			</item>
-            	<item label="Aplicar Ajustes" icon="labwc-tweaks-gtk"> <action name="Reconfigure"/>
+            	<item label="Aplicar Ajustes" icon="labwc-tweaks-gtk"> 
+    	  			<action name="Execute"><command>~/.config/scripts/reload.sh</command></action>
             	</item>
      	</menu>
             <item label="Salir" icon="session-properties">
