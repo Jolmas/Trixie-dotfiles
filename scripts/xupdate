@@ -43,7 +43,7 @@ while getopts 'iq' OPTION; do
   esac
 done
 
-[ "$(which apt)" ] && PkgMgr="apt" || PkgMgr="apt"
+[ "$(which nala)" ] && PkgMgr="nala" || PkgMgr="nala"
 
 see_it() {
 	[ "$_interactive" = "yes" ] && ( read -r -n1 -p " $_msg \"Y/n\" " answ
@@ -75,7 +75,7 @@ _update() {
       do_it() { 
 		[ "$_quiet" != "yes" ] &&
 		$PkgMgr update        ||
-		$PkgMgr update  2>&1 >/dev/null
+		$PkgMgr update  
 }
 	see_it
 	no_see
@@ -87,7 +87,7 @@ _upgradable() {
       do_it() {
 		[ "$_quiet" != "yes" ] &&
 		$PkgMgr list --upgradable  ||
-		$PkgMgr list --upgradable 2>&1 > /dev/null 2>&1
+		$PkgMgr list --upgradable > /dev/null 2>&1
 }
 	see_it
 #	no_see
@@ -98,7 +98,7 @@ _upgrade() {
       _msg="Instalar todos las actualizaciones disponibles?"
       do_it() {
 		[ "$_quiet" != "yes" ] &&
-		$PkgMgr upgrade 2>&1 >/dev/null
+		$PkgMgr upgrade 
 }
 	see_it
 	no_see
@@ -109,7 +109,7 @@ _apt_clean() {
       _msg="Eliminar paquetes no necesarios de la cache apt?"
       do_it() {
 		[ "$_quiet" != "yes" ] &&
-		$PkgMgr clean 2>&1 >/dev/null
+		$PkgMgr clean > /dev/null 2>&1
 }
 	see_it
 	no_see
@@ -120,7 +120,7 @@ _apt_autoremove() {
       _msg="Eliminar dependencias no necesarias?"
       do_it() {
 		[ "$_quiet" != "yes" ] &&
-		$PkgMgr autoremove 2>&1 >/dev/null
+		$PkgMgr autoremove > /dev/null 2>&1
 }
 	see_it
 	no_see
@@ -147,7 +147,7 @@ _ssd_trimfs() {
       _msg="Para SSDs: Sistema de Archivos elegibles para trim ext2/3/4?"
       do_it() {
 		for mnt in $(grep -E "(ext2|ext3|ext4)" /etc/mtab | cut -f2 -d" ")
-		    do fstrim "${mnt}" &>/dev/null &&
+		    do fstrim "${mnt}" &
 			echo -e " fstrim completado para \"${mnt}\"" ||
 			echo -e " No se requiere fstrim para \"${mnt}\""
 		    done

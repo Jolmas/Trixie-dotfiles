@@ -4,8 +4,8 @@
 DIR=$HOME/Imágenes/Wallpapers
 
 # wofi window config (in %)
-WIDTH=25
-HEIGHT=40
+WIDTH=55
+HEIGHT=65
 
 PICS=($(ls ${DIR} | grep -e ".jpg$" -e ".jpeg$" -e ".png$"))
 

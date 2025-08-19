@@ -55,6 +55,11 @@ menu(){
   printf "35. Aqua-Gradient\n"
   printf "36. MacOS-Leopard\n"
   printf "37. MacOS-Lion\n"
+  printf "38. Bluelook\n"
+  printf "39. Oxygen\n"
+  printf "40. OxigenGlass\n"
+  printf "41. OxigenLight\n"
+
 }
 
 restart() {
@@ -287,6 +292,30 @@ main() {
 	        ln -sf $THEMES/style-sequoia.css "$HOME/.config/waybar/style.css"
     	    ln -sf $THEMES/style-sequoia.css "$HOME/.config/waybar/style-default.css"
 			sed -i "s/$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>"| awk -F"[><]" '{print $3}')/Lab-MacOS-Lion/g" ~/.config/labwc/rc.xml
+			restart
+            ;;
+        38)
+	        ln -sf $THEMES/style-mauve.css "$HOME/.config/waybar/style.css"
+    	    ln -sf $THEMES/style-mauve.css "$HOME/.config/waybar/style-default.css"
+			sed -i "s/$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>"| awk -F"[><]" '{print $3}')/Lab-Bluelook/g" ~/.config/labwc/rc.xml
+			restart
+            ;;
+        39)
+	        ln -sf $THEMES/style-mauve.css "$HOME/.config/waybar/style.css"
+    	    ln -sf $THEMES/style-mauve.css "$HOME/.config/waybar/style-default.css"
+			sed -i "s/$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>"| awk -F"[><]" '{print $3}')/Lab-Oxygen/g" ~/.config/labwc/rc.xml
+			restart
+            ;;
+        40)
+	        ln -sf $THEMES/style-mauve.css "$HOME/.config/waybar/style.css"
+    	    ln -sf $THEMES/style-mauve.css "$HOME/.config/waybar/style-default.css"
+			sed -i "s/$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>"| awk -F"[><]" '{print $3}')/Lab-Oxygen-Glass/g" ~/.config/labwc/rc.xml
+			restart
+            ;;
+        41)
+	        ln -sf $THEMES/style-mauve.css "$HOME/.config/waybar/style.css"
+    	    ln -sf $THEMES/style-mauve.css "$HOME/.config/waybar/style-default.css"
+			sed -i "s/$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>"| awk -F"[><]" '{print $3}')/Lab-Oxygen-light/g" ~/.config/labwc/rc.xml
 			restart
             ;;
         *)
