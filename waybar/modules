@@ -288,7 +288,7 @@
 
 "custom/updater":{
   "format": "📦 {}",
-  "on-click": "foot ~/bin/chupdate",
+  "on-click": "foot ~/.config/scripts/xupdate",
   "tooltip": true,
   "tooltip-format": "Actualizar Sistema",
 },

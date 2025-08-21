@@ -24,15 +24,17 @@ menu(){
   printf "4. byw\n"
   printf "5. rgb\n"
   printf "6. default_alter\n"
-  printf "7. tahoe-light\n"
+  printf "7. sequoia-light\n"
   printf "8. light\n"
   printf "9. dracula\n"
   printf "10. dark\n"
   printf "11. clear\n"
-  printf "12. tahoe-dark\n"
+  printf "12. sequoia-dark\n"
   printf "13. nord\n"
   printf "14. evergreen\n"
   printf "15. sequoia\n"
+  printf "16. tahoe\n"
+  printf "17. tahoe-dark\n"
 
 }
 
@@ -118,6 +120,16 @@ main() {
         15)
 	        ln -sf $THEMES/style-sequoia.css "$HOME/.config/waybar/style.css"
     	    ln -sf $THEMES/style-sequoia.css "$HOME/.config/waybar/style-default.css"
+			restart
+            ;;
+        16)
+	        ln -sf $THEMES/style-tahoe.css "$HOME/.config/waybar/style.css"
+    	    ln -sf $THEMES/style-tahoe.css "$HOME/.config/waybar/style-default.css"
+			restart
+            ;;
+        17)
+	        ln -sf $THEMES/style-tahoe-dark.css "$HOME/.config/waybar/style.css"
+    	    ln -sf $THEMES/style-tahoe-dark.css "$HOME/.config/waybar/style-default.css"
 			restart
             ;;
         *)

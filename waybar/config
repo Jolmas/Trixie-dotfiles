@@ -1,39 +1,35 @@
 {
 
-"include": "~/.config/waybar/modules",
+"include": "~/.config/waybar/modules-2",
 "layer": "top",
 //"mode": "dock",
 "exclusive": true,
 "passthrough": false,
-"position": "bottom",
+"position": "top",
 "spacing": 3,
 "fixed-center": true,
 "ipc": true,
-"margin-left": 10,
-"margin-right": 10,
-"margin-bottom": 6,
+"margin-top": 3,
+"margin-left": 4,
+"margin-right": 4,
 
 "modules-left": [
-	"custom/menu", 
-	"sway/workspaces",
-	"sway/taskbar",
-	 ],
-  
+	"cpu",
+	"temperature", 
+	"memory",
+	"custom/updater",
+	"niri/workspaces",
+    ],
+
 "modules-center": [
-	"hyprland/window",
-	"custom/light_dark",
-	], 
+	"wlr/taskbar",
+	],
 
 "modules-right": [
-	"tray", 
- 	"custom/weather",
-	"clock",
-	"cpu", 
-	"temperature", 
-	"memory",  
-	"pulseaudio",
-	//"wireplumber", 
-	"custom/cycle_wall",
-	"custom/power",
+    "custom/cycle_wall",
+	"tray",
+	"wireplumber", 
+    "clock",
+    "custom/power",
 	],
 }

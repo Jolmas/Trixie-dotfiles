@@ -15,6 +15,11 @@ window#waybar {
   background: rgba(255, 255, 255, 0.5);
   color: rgb(0, 0, 0);
   border-radius: 8px;
+  border-width: 1px;
+}
+
+window#waybar.hidden {
+	opacity: 0.5;
 }
 
 tooltip {
@@ -25,26 +30,29 @@ tooltip label {
 }
 
 #workspaces button {
-  padding: 4px;
+  padding: 2px;
   background: transparent;
   color: white;
-  border-bottom: 2px solid transparent;
   margin-right: 5px;
 }
 
 #workspaces button.focused {
-  background: #64727d;
-  border-bottom: 8px solid white;
+  color: #64727d;
 }
 
 #workspaces button.active {
-	background-color: #14adff;
+	color: #14adff;
 	border-radius: 15px 15px 15px 15px;	
 }
 
 #taskbar button.active {
 	background-color: #14adff;
 	padding: 1px 2px;
+}
+
+#workspaces button:hover {
+	color: #14adff;
+	border-radius: 8px;	
 }
 
 #mode,
@@ -74,11 +82,10 @@ tooltip label {
 #mode,
 #idle_inhibitor,
 #scratchpad,
-
 #idle_inhibitor {
 	border-radius: 6px;
-	padding: 2px 2px;
-	margin: 1px 1px;
+	padding: 1px 2px;
+	margin: 0px 1px;
 }
 
 #mpd {
@@ -115,6 +122,10 @@ tooltip label {
     background-color: #ffffff;
     color: #000000;
   }
+}
+
+#taskbar buttom.active {
+	background-color: #14adff;
 }
 
 #battery.warning:not(.charging) {

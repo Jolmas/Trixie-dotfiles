@@ -95,7 +95,7 @@
 },
 
 "cpu": {
-  "format": "{usage}% ",
+  "format": "{usage}% 󰒇",
   "interval": 1,
   "format-alt-click": "click",
   "format-alt": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% ",
@@ -155,8 +155,8 @@
 
 "memory": {
   "interval": 10,
-  "format": "{used:0.1f}G  ",
-  "format-alt": "{percentage}%  ",
+  "format": "{used:0.1f}G 󰣳 ",
+  "format-alt": "{percentage}% 󰣳 ",
   "format-alt-click": "click",
   "tooltip": true,
   "tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
@@ -271,7 +271,7 @@
 },
 
 "custom/menu": {
-  "format": " ",
+  "format": " 󰆦",
   "on-click": "~/.config/scripts/Wofi.sh",
   "on-click-right": "$HOME/.config/scripts/LabwcTheme.sh",
   "tooltip": true,
@@ -281,21 +281,22 @@
 "custom/power": {
   "format": "",
   "tooltip": false,
+  "tooltip-format": "1🖯: Salir",
   //"on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
-  "on-click": "~/.config/powermenu/powerniri.sh",
+  "on-click": "/usr/bin/wlogout",
   //"on-click-right": "~/.config/scripts/ChangeBlur.sh",
 },
 
 "custom/updater":{
   "format": "  {}",
-  "on-click": "foot ~/bin/chupdate",
+  "on-click": "foot ~/.config/scripts/xupdate",
   "tooltip": true,
   "tooltip-format": "Actualizar Sistema",
 },
 
 "custom/clipboard":{
   "format": " {}",
-  "on-click": "clapboard",
+  "on-click": "copyq toggle",
   "tooltip": true,
   "tooltip-format": "Portapapeles",
 },
