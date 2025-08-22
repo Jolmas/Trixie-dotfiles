@@ -271,7 +271,7 @@
 },
 
 "custom/menu": {
-  "format": " 󰆦",
+  "format": " 󰆦 ",
   "on-click": "~/.config/scripts/Wofi.sh",
   "on-click-right": "$HOME/.config/scripts/LabwcTheme.sh",
   "tooltip": true,
@@ -336,28 +336,28 @@
 },
 
 "custom/ws1": {
-	"format": "1 {}",
+	"format": "1{}",
 	"tooltip": true,
 	"tooltip-format": "Escritorio 1",
 	"on-click": "wtype -M ctrl -M alt -k Left -m ctrl -m alt 2> /dev/null"
 	},
 
 "custom/ws2": {
-	"format": "2 {}",
+	"format": "2{}",
 	"tooltip": true,
 	"tooltip-format": "Escritorio 2",
 	"on-click": "wtype -M ctrl -M alt -k Right -m ctrl -m alt 2> /dev/null"
 	},
 
 "custom/ws3": {
-	"format": "3 {}",
+	"format": "3{}",
 	"tooltip": true,
 	"tooltip-format": "Escritorio 3",
 	"on-click": "wtype -M ctrl -M alt -k Up -m ctrl -m alt 2> /dev/null"
 	},
 
 "custom/ws4": {
-	"format": "4 {}",
+	"format": "4{}",
 	"tooltip": true,
 	"tooltip-format": "Escritorio 4",
 	"on-click": "wtype -M ctrl -M alt -k Down -m ctrl -m alt 2> /dev/null"
