@@ -147,7 +147,7 @@ _ssd_trimfs() {
       _msg="Para SSDs: Sistema de Archivos elegibles para trim ext2/3/4?"
       do_it() {
 		for mnt in $(grep -E "(ext2|ext3|ext4)" /etc/mtab | cut -f2 -d" ")
-		    do fstrim "${mnt}" &
+		    do fstrim "${mnt}" > /dev/null 2>&1 &
 			echo -e " fstrim completado para \"${mnt}\"" ||
 			echo -e " No se requiere fstrim para \"${mnt}\""
 		    done

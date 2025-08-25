@@ -6,7 +6,7 @@ min-height: 0;
 /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
 font-size: 98%;
 font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-padding: 0px;
+padding: 1px;
 margin-top: 1px;
 margin-bottom: 1px;
 }
@@ -49,16 +49,14 @@ tooltip label {
     padding: 2px;
     background: transparent;
     color: black;
-    margin-right: 2px;
+    margin: 1px;
 }
    
 #workspaces button.active {
     color: #14adff;
     border-radius: 4px;
-    padding: 1px 1px;
-    margin: 1px;
-    margin-right: 2px;
-    margin-left: 1px;
+    padding: 1px;
+    margin: 0px;
 }
   
 #workspaces button.focused {
@@ -70,7 +68,7 @@ tooltip label {
 #taskbar button.active {
     background-color: #14adff;
     padding: 0px 0px;
-    margin: 1 0 0 1;
+    margin: 0px 0px 0px 0px;
     margin-right: 0px;
 }
    
@@ -128,8 +126,8 @@ tooltip label {
 #custom-weather.default 
 #idle_inhibitor {
     border-radius: 6px;
-    padding: 1px 1px;
-    margin: 0 0 0 0;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
     color:#262626;
 }
      

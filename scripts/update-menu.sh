@@ -58,7 +58,7 @@ printf '%b\n' '<separator />
    <menu id="40" label="LabWC" icon="labwc-tweaks-gtk">
             <menu id="client-list-menu"/>
             	<item label="Editar Ajustes" icon="systemsettings">
-              		<action name="Execute"><command>~/.config/scripts/WkrEdit.sh</command>
+              		<action name="Execute"><command>~/.config/scripts/TofiEdit.sh</command>
               		</action>
             	</item>
             	<item label="Actualizar Menú" icon="systemsettings">

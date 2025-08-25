@@ -74,6 +74,7 @@ tooltip label {
 #workspaces button.focused {
     color: #64727d;
 	padding: 0px 0px;
+    margin: 1 0 0 1;
 }
 
 #taskbar button.active {

@@ -6,6 +6,7 @@ waybarDir="$HOME/.config/waybar"
 menu(){
   printf "1. Configure Labwc\n"
   printf "2. Configure Waybar\n"
+  printf "3. Configure Autostart\n"
 
 }
 
@@ -19,6 +20,9 @@ main() {
             ;;
         2)
             foot -e micro "$waybarDir/config-default"
+            ;;
+        3)
+            foot -e micro "$labDir/autostart"
             ;;
         *)
             ;;

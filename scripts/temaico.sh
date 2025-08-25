@@ -21,7 +21,7 @@ echo "Aplicando el tema '$TEMA_EXTRAIDO'..."
 
 gsettings set org.gnome.desktop.interface icon-theme "$TEMA_EXTRAIDO"
 
-#sed -i '' "s/$(grep "<icon>" ~/.config/labwc/rc.xml | grep "<icon>"| awk -F"[><]" '{print $3}')/$TEMA_EXTRAIDO/g" ~/.config/labwc/rc.xml
+# sed -i '' "s/$(grep "<icon>" ~/.config/labwc/rc.xml | grep "<icon>"| awk -F"[><]" '{print $3}')/$TEMA_EXTRAIDO/g" ~/.config/labwc/rc.xml
 
 if [[ $? -eq 0 ]]; then
     echo "¡Tema de Iconos '$TEMA_EXTRAIDO' aplicado con éxito! 🎉"

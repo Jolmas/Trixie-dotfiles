@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # WOFI STYLES
-CONFIG="$HOME/.config/wofi/WofiBig/config"
+CONFIG="$HOME/.config/wofi/config-main"
 STYLE="$HOME/.config/wofi/style.css"
 COLORS="$HOME/.config/wofi/colors"
 
 wayDir="$HOME/.config/waybar"
 labDir="$HOME/.config/labwc"
 # wofi window config (in %)
-WIDTH=10
-HEIGHT=20
+WIDTH=25
+HEIGHT=16
 
 ## Wofi Command
 wofi_command="wofi --show dmenu \
@@ -23,7 +23,7 @@ wofi_command="wofi --show dmenu \
 menu(){
   printf "1. Waybar Config\n"
   printf "2. Labwc Config\n"
-  printf "3. Labwc Menu\n"
+  printf "3. Labwc Autostart\n"
 }
 
 main() {
@@ -36,7 +36,7 @@ main() {
             foot -e micro "$labDir/rc.xml"
             ;;
         3)
-            foot -e micro "$labDir/menu.xml"
+            foot -e micro "$labDir/autostart"
             ;;
         *)
             ;;

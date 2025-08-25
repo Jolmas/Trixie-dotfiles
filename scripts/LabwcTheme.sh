@@ -18,7 +18,7 @@ wofi_command="wofi --show dmenu \
 			--matching=fuzzy"
 
 menu(){
-  printf "1. Purple\n"
+  printf "1. WhiteSur\n"
   printf "2. Catppuccin\n"
   printf "3. Tokyo-Night\n"
   printf "4. Arc-Light\n"
@@ -72,9 +72,9 @@ main() {
     choice=$(menu | ${wofi_command} | cut -d. -f1)
     case $choice in
         1)
-            ln -sf $THEMES/style-dark-tokyo.css "$HOME/.config/waybar/style.css"
-			ln -sf $THEMES/style-dark-tokyo.css "$HOME/.config/waybar/style-default.css"
-			sed -i "s/$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>"| awk -F"[><]" '{print $3}')/Lab-Purple/g" ~/.config/labwc/rc.xml
+            ln -sf $THEMES/style-tahoe.css "$HOME/.config/waybar/style.css"
+			ln -sf $THEMES/style-tahoe.css "$HOME/.config/waybar/style-default.css"
+			sed -i "s/$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>"| awk -F"[><]" '{print $3}')/Lab-WhiteSur-small/g" ~/.config/labwc/rc.xml
 			restart
             ;;
         2)
@@ -114,8 +114,8 @@ main() {
 			restart
             ;;
         8)
-	        ln -sf $THEMES/style-light.css "$HOME/.config/waybar/style.css"
-    	    ln -sf $THEMES/style-light.css "$HOME/.config/waybar/style-default.css"
+	        ln -sf $THEMES/style-sequoia.css "$HOME/.config/waybar/style.css"
+    	    ln -sf $THEMES/style-sequoia.css "$HOME/.config/waybar/style-default.css"
 			sed -i "s/$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>"| awk -F"[><]" '{print $3}')/Lab-Mac-Light/g" ~/.config/labwc/rc.xml
 			restart
             ;;
@@ -168,8 +168,8 @@ main() {
 			restart
             ;;
         17)
-			ln -sf $THEMES/style-dark-cat.css "$HOME/.config/waybar/style.css"
-			ln -sf $THEMES/style-dark-cat.css "$HOME/.config/waybar/style-default.css"
+			ln -sf $THEMES/style-tahoe-dark.css "$HOME/.config/waybar/style.css"
+			ln -sf $THEMES/style-tahoe-dark.css "$HOME/.config/waybar/style-default.css"
 			sed -i "s/$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>"| awk -F"[><]" '{print $3}')/Lab-Mac-Dark/g" ~/.config/labwc/rc.xml
 			restart
             ;;
@@ -300,14 +300,14 @@ main() {
 			restart
             ;;
         39)
-	        ln -sf $THEMES/style-mauve.css "$HOME/.config/waybar/style.css"
-    	    ln -sf $THEMES/style-mauve.css "$HOME/.config/waybar/style-default.css"
+	        ln -sf $THEMES/style-sequoia.css "$HOME/.config/waybar/style.css"
+    	    ln -sf $THEMES/style-sequoia.css "$HOME/.config/waybar/style-default.css"
 			sed -i "s/$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>"| awk -F"[><]" '{print $3}')/Lab-Oxygen/g" ~/.config/labwc/rc.xml
 			restart
             ;;
         40)
-	        ln -sf $THEMES/style-mauve.css "$HOME/.config/waybar/style.css"
-    	    ln -sf $THEMES/style-mauve.css "$HOME/.config/waybar/style-default.css"
+	        ln -sf $THEMES/style-sequoia.css "$HOME/.config/waybar/style.css"
+    	    ln -sf $THEMES/style-sequoia.css "$HOME/.config/waybar/style-default.css"
 			sed -i "s/$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>"| awk -F"[><]" '{print $3}')/Lab-Oxygen-Glass/g" ~/.config/labwc/rc.xml
 			restart
             ;;
