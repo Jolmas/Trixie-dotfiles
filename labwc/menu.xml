@@ -15,6 +15,9 @@
     <item label="Administrador de archivos Thunar" icon="org.xfce.thunar">
       <action name="Execute"><command>thunar</command></action>
     </item>
+    <item label="Ayuda" icon="org.gnome.Yelp">
+      <action name="Execute"><command>yelp</command></action>
+    </item>
     <item label="Azote" icon="azote">
       <action name="Execute"><command>azote</command></action>
     </item>
@@ -51,8 +54,14 @@
     <item label="Gestor de archivos" icon="org.xfce.filemanager">
       <action name="Execute"><command>exo-open --launch FileManager</command></action>
     </item>
+    <item label="Impresión" icon="io.gitlab.adhami3310.Impression">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=impression --file-forwarding io.gitlab.adhami3310.Impression @@u  @@</command></action>
+    </item>
     <item label="Keyboard layout viewer" icon="input-keyboard">
       <action name="Execute"><command>kbd-layout-viewer5</command></action>
+    </item>
+    <item label="Mapa de caracteres" icon="accessories-character-map">
+      <action name="Execute"><command>gucharmap</command></action>
     </item>
     <item label="Micro" icon="/usr/share/micro/micro-logo-mark.svg">
       <action name="Execute"><command>foot 'micro'</command></action>
@@ -65,6 +74,12 @@
     </item>
     <item label="Mousepad" icon="org.xfce.mousepad">
       <action name="Execute"><command>mousepad</command></action>
+    </item>
+    <item label="scrcpy" icon="scrcpy">
+      <action name="Execute"><command>/bin/sh -c "\$SHELL -i -c scrcpy"</command></action>
+    </item>
+    <item label="scrcpy (console)" icon="scrcpy">
+      <action name="Execute"><command>foot '/bin/sh -c "\$SHELL -i -c 'scrcpy --pause-on-exit=if-error'"'</command></action>
     </item>
     <item label="Xarchiver" icon="xarchiver">
       <action name="Execute"><command>xarchiver</command></action>
@@ -94,6 +109,9 @@
     </item>
     <item label="Configuración de red avanzada" icon="preferences-system-network">
       <action name="Execute"><command>nm-connection-editor</command></action>
+    </item>
+    <item label="Configuración del cortafuegos" icon="gufw">
+      <action name="Execute"><command>gufw</command></action>
     </item>
     <item label="Configuración del editor de texto" icon="org.xfce.mousepad">
       <action name="Execute"><command>mousepad --preferences</command></action>
@@ -130,6 +148,9 @@
     </item>
     <item label="Gestor de ventanas" icon="org.xfce.xfwm4">
       <action name="Execute"><command>xfwm4-settings</command></action>
+    </item>
+    <item label="GTK Settings" icon="nwg-look">
+      <action name="Execute"><command>nwg-look</command></action>
     </item>
     <item label="Input Method" icon="input-keyboard">
       <action name="Execute"><command>im-config</command></action>
@@ -189,6 +210,9 @@
     <item label="ImageMagick (color depth=q16)" icon="display-im7.q16">
       <action name="Execute"><command>/usr/bin/display-im7.q16 -nostdin</command></action>
     </item>
+    <item label="Inkscape" icon="org.inkscape.Inkscape">
+      <action name="Execute"><command>inkscape</command></action>
+    </item>
     <item label="Programa de manipulación de imágenes de GNU" icon="gimp">
       <action name="Execute"><command>gimp-3.0</command></action>
     </item>
@@ -203,8 +227,11 @@
     <item label="Configuración de red avanzada" icon="preferences-system-network">
       <action name="Execute"><command>nm-connection-editor</command></action>
     </item>
-    <item label="Firefox ESR" icon="firefox-esr">
-      <action name="Execute"><command>/usr/lib/firefox-esr/firefox-esr</command></action>
+    <item label="Firefox Browser" icon="firefox">
+      <action name="Execute"><command>~/.local/share/firefox/firefox</command></action>
+    </item>
+    <item label="Google Chrome" icon="google-chrome">
+      <action name="Execute"><command>/usr/bin/google-chrome-stable</command></action>
     </item>
     <item label="Indicador de KDE Connect" icon="kdeconnect">
       <action name="Execute"><command>kdeconnect-indicator</command></action>
@@ -215,11 +242,17 @@
     <item label="Lector de correo" icon="org.xfce.mailreader">
       <action name="Execute"><command>exo-open --launch MailReader</command></action>
     </item>
+    <item label="Motrix" icon="net.agalwood.Motrix">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=start-motrix --file-forwarding net.agalwood.Motrix @@u  @@</command></action>
+    </item>
     <item label="Navegador web" icon="org.xfce.webbrowser">
       <action name="Execute"><command>exo-open --launch WebBrowser</command></action>
     </item>
     <item label="SMS de KDE Connect" icon="kdeconnect">
       <action name="Execute"><command>kdeconnect-sms</command></action>
+    </item>
+    <item label="Zen Browser" icon="zen_browser">
+      <action name="Execute"><command>~/.local/share/zen/zen</command></action>
     </item>
   </menu> <!-- Internet -->
   <menu id="Multimedia" label="Multimedia" icon="applications-multimedia">
@@ -269,6 +302,9 @@
     <item label="Administrador de archivos Thunar" icon="org.xfce.thunar">
       <action name="Execute"><command>thunar</command></action>
     </item>
+    <item label="Alacritty" icon="Alacritty">
+      <action name="Execute"><command>alacritty</command></action>
+    </item>
     <item label="Aplicaciones predeterminadas" icon="org.xfce.settings.default-applications">
       <action name="Execute"><command>xfce4-mime-settings</command></action>
     </item>
@@ -287,6 +323,9 @@
     <item label="Configuración de impresión" icon="printer">
       <action name="Execute"><command>system-config-printer</command></action>
     </item>
+    <item label="Configuración del cortafuegos" icon="gufw">
+      <action name="Execute"><command>gufw</command></action>
+    </item>
     <item label="Fcitx 5" icon="fcitx">
       <action name="Execute"><command>/usr/bin/fcitx5</command></action>
     </item>
@@ -304,6 +343,12 @@
     </item>
     <item label="Htop" icon="htop">
       <action name="Execute"><command>foot 'htop'</command></action>
+    </item>
+    <item label="Impresión" icon="io.gitlab.adhami3310.Impression">
+      <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=impression --file-forwarding io.gitlab.adhami3310.Impression @@u  @@</command></action>
+    </item>
+    <item label="Instalador de paquetes GDebi" icon="package-x-generic">
+      <action name="Execute"><command>gdebi-gtk</command></action>
     </item>
     <item label="Labwc Config" icon="labwc-tweaks-gtk">
       <action name="Execute"><command>labwc-tweaks-gtk</command></action>
@@ -326,7 +371,7 @@
               		</action>
             	</item>
             	<item label="Actualizar Menú" icon="systemsettings">
-              		<action name="Execute"><command>~/bin/update-lwmenu.sh</command>
+              		<action name="Execute"><command>~/.config/scripts/update-lwmenu.sh</command>
               		</action>
             	</item>
 	    		<item label="Temas" icon="labwc-tweaks-gtk">

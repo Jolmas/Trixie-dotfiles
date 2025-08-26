@@ -19,8 +19,8 @@
     <screenEdgeStrength>10</screenEdgeStrength>
   </resistance>
   <theme>
-    <name>Lab-MacOS-Leopard</name>
-    <icon>WhiteSur-light</icon>
+    <name>Lab-MacOS-Lion</name>
+    <icon>MacTahoe-light</icon>
     <cornerRadius>8</cornerRadius>
     <font name="Noto Sans" size="11"/>
     <keppBorder>yes</keppBorder>
@@ -89,7 +89,7 @@
     <keybind key="W-F12">
       <action name="Execute" command="/home/luism/.config/scripts/WpSel.sh"/>
     </keybind>
-    <keybind key="W-k">
+    <keybind key="W-n">
       <action name="Execute" command="foot -T Ncmpcpp ncmpcpp"/>
     </keybind>
     <keybind key="W-m">
@@ -111,7 +111,7 @@
       <action name="Execute" command="/home/luism/.config/scripts/ScreenShot.sh --area"/>
     </keybind>
     <keybind key="W-w">
-      <action name="Execute" command="/usr/bin/firefox-esr"/>
+      <action name="Execute" command="/home/luism/.local/share/zen/zen"/>
     </keybind>
     <keybind key="C-A-Delete">
       <action name="Execute" command="/usr/bin/wlogout"/>
@@ -194,7 +194,10 @@
       <action name="Close"/>
     </keybind>
     <keybind key="A-F5">
-      <action name="Execute" command="/usr/local/bin/walker"/>
+      <action name="Execute" command="anyrun"/>
+    </keybind>
+    <keybind key="A-F9">
+      <action name="Execute" command="~/bin/Wofi-Lofi.sh"/>
     </keybind>
     <!-- Resize active window -->
     <keybind key="W-S-r">
@@ -224,31 +227,35 @@
     </keybind>
     <keybind key="C-A-left">
       <action name="GoToDesktop" to="1"/>
-      <!-- <action name="Execute" command="~/.config/labwc/set_wallpaper.sh 1"/> -->
+      <action name="Execute" command="~/.config/scripts/wstmp.sh 1"/>
     </keybind>
     <keybind key="C-A-right">
       <action name="GoToDesktop" to="2"/>
-      <!-- <action name="Execute" command="~/.config/labwc/set_wallpaper.sh 2"/> -->
+      <action name="Execute" command="~/.config/scripts/wstmp.sh 2"/>
     </keybind>
     <keybind key="C-A-up">
       <action name="GoToDesktop" to="3"/>
-      <!-- <action name="Execute" command="~/.config/labwc/set_wallpaper.sh 3"/> -->
+      <action name="Execute" command="~/.config/scripts/wstmp.sh 3"/>
     </keybind>
     <keybind key="C-A-down">
       <action name="GoToDesktop" to="4"/>
-      <!-- <action name="Execute" command="~/.config/labwc/set_wallpaper.sh 4"/> -->
+      <action name="Execute" command="~/.config/scripts/wstmp.sh 4"/>
     </keybind>
     <keybind key="W-S-left">
       <action name="SendToDesktop" to="1"/>
+      <action name="Execute" command="~/.config/scripts/wstmp.sh 1"/>
     </keybind>
     <keybind key="W-S-right">
       <action name="SendToDesktop" to="2"/>
+      <action name="Execute" command="~/.config/scripts/wstmp.sh 2"/>
     </keybind>
     <keybind key="W-S-up">
       <action name="SendToDesktop" to="3"/>
+      <action name="Execute" command="~/.config/scripts/wstmp.sh 3"/>
     </keybind>
     <keybind key="W-S-down">
       <action name="SendToDesktop" to="4"/>
+      <action name="Execute" command="~/.config/scripts/wstmp.sh 4"/>
     </keybind>
     <!-- Misc -->
     <keybind key="W-a">
