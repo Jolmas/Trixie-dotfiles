@@ -17,10 +17,10 @@
 	"cpu",
 	"temperature",
 	"memory",
-	"custom/ws1",
-	"custom/ws2",
-	"custom/ws3",
-	"custom/ws4",
+	"custom/wsactive1",
+	"custom/wsactive2",
+	"custom/wsactive3",
+	"custom/wsactive4",
 	],
 
 "modules-center": [

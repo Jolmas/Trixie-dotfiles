@@ -322,6 +322,46 @@
 	}
 },
 
+"custom/ws1": {
+	"format": "{icon}",
+	"tooltip": true,
+	"tooltip-format": "Escritorio 1",
+	"on-click": "wtype -M ctrl -M alt -k Left -m ctrl -m alt 2> /dev/null",
+	"format-icons": {
+		  "default": " "
+		}
+},
+
+"custom/ws2": {
+	"format": "{icon}",
+	"tooltip": true,
+	"tooltip-format": "Escritorio 2",
+	"on-click": "wtype -M ctrl -M alt -k Right -m ctrl -m alt 2> /dev/null",
+"format-icons": {
+	  "default": " "
+	}
+},
+
+"custom/ws3": {
+	"format": "{icon}",
+	"tooltip": true,
+	"tooltip-format": "Escritorio 3",
+	"on-click": "wtype -M ctrl -M alt -k Up -m ctrl -m alt 2> /dev/null",
+"format-icons": {
+	  "default": " "
+	}
+},
+
+"custom/ws4": {
+	"format": "{icon}",
+	"tooltip": true,
+	"tooltip-format": "Escritorio 4",
+	"on-click": "wtype -M ctrl -M alt -k Down -m ctrl -m alt 2> /dev/null",
+"format-icons": {
+	  "default": "󰐌 "
+	}
+},
+
 "custom/wsactive1": {
     "format": "{} ",
     "interval": 10,
