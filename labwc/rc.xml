@@ -19,7 +19,7 @@
     <screenEdgeStrength>10</screenEdgeStrength>
   </resistance>
   <theme>
-    <name>Lab-MacOS-Lion</name>
+    <name>Lab-Oxygen</name>
     <icon>MacTahoe-light</icon>
     <cornerRadius>8</cornerRadius>
     <font name="Noto Sans" size="11"/>
@@ -81,7 +81,7 @@
       <action name="Execute" command="thunar"/>
     </keybind>
     <keybind key="W-F1">
-      <action name="Execute" command="/home/luism/bin/lakeys.sh"/>
+      <action name="Execute" command="/home/luism/.config/scripts/Labcmd.sh"/>
     </keybind>
     <keybind key="W-F11">
       <action name="Execute" command="/home/luism/.config/scripts/LabwcTheme.sh"/>
@@ -109,6 +109,9 @@
     </keybind>
     <keybind key="C-print">
       <action name="Execute" command="/home/luism/.config/scripts/ScreenShot.sh --area"/>
+    </keybind>
+	<keybind key="W-v">
+      <action name="Execute" command="com.github.babluboy.bookworm"/>
     </keybind>
     <keybind key="W-w">
       <action name="Execute" command="/home/luism/.local/share/zen/zen"/>

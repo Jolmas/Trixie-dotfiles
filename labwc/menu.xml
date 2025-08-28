@@ -228,7 +228,7 @@
       <action name="Execute"><command>nm-connection-editor</command></action>
     </item>
     <item label="Firefox Browser" icon="firefox">
-      <action name="Execute"><command>~/.local/share/firefox/firefox</command></action>
+      <action name="Execute"><command>/home/luism/.local/share/firefox/firefox</command></action>
     </item>
     <item label="Google Chrome" icon="google-chrome">
       <action name="Execute"><command>/usr/bin/google-chrome-stable</command></action>
@@ -251,8 +251,8 @@
     <item label="SMS de KDE Connect" icon="kdeconnect">
       <action name="Execute"><command>kdeconnect-sms</command></action>
     </item>
-    <item label="Zen Browser" icon="zen_browser">
-      <action name="Execute"><command>~/.local/share/zen/zen</command></action>
+    <item label="Zen Browser" icon="zen-browser">
+      <action name="Execute"><command>/home/luism/.local/share/zen/zen</command></action>
     </item>
   </menu> <!-- Internet -->
   <menu id="Multimedia" label="Multimedia" icon="applications-multimedia">
@@ -279,6 +279,9 @@
     </item>
   </menu> <!-- Multimedia -->
   <menu id="Office" label="Oficina" icon="applications-office">
+    <item label="Bookworm" icon="com.github.babluboy.bookworm">
+      <action name="Execute"><command>com.github.babluboy.bookworm</command></action>
+    </item>
     <item label="ghostwriter" icon="ghostwriter">
       <action name="Execute"><command>ghostwriter</command></action>
     </item>
@@ -288,8 +291,8 @@
     <item label="ONLYOFFICE" icon="org.onlyoffice.desktopeditors">
       <action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=desktopeditors --file-forwarding org.onlyoffice.desktopeditors @@u  @@</command></action>
     </item>
-    <item label="Visor documental Atril" icon="atril">
-      <action name="Execute"><command>atril</command></action>
+    <item label="qpdfview" icon="qpdfview">
+      <action name="Execute"><command>qpdfview --unique</command></action>
     </item>
     <item label="Zathura" icon="org.pwmt.zathura">
       <action name="Execute"><command>zathura</command></action>
@@ -325,6 +328,9 @@
     </item>
     <item label="Configuración del cortafuegos" icon="gufw">
       <action name="Execute"><command>gufw</command></action>
+    </item>
+    <item label="Editor de dconf" icon="ca.desrt.dconf-editor">
+      <action name="Execute"><command>dconf-editor</command></action>
     </item>
     <item label="Fcitx 5" icon="fcitx">
       <action name="Execute"><command>/usr/bin/fcitx5</command></action>
@@ -367,7 +373,7 @@
    <menu id="40" label="LabWC" icon="labwc-tweaks-gtk">
             <menu id="client-list-menu"/>
             	<item label="Editar Ajustes" icon="systemsettings">
-              		<action name="Execute"><command>~/.config/scripts/TofiEdit.sh</command>
+              		<action name="Execute"><command>~/.config/scripts/WofiEdit.sh</command>
               		</action>
             	</item>
             	<item label="Actualizar Menú" icon="systemsettings">

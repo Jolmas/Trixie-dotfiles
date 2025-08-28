@@ -3,7 +3,7 @@
 # Configuration
 WALLPAPER_DIR="$HOME/Imágenes/Wallpapers"
 CACHE_FILE="$HOME/.cache/wallpaper_index.txt"
-ROFI_CONFIG="$HOME/.config/rofi/themes/fullscreen-preview.rasi"
+ROFI_CONFIG="$HOME/.config/rofi/config-wallpaper.rasi"
 THUMBNAIL_DIR="$HOME/.cache/wallpaper-thumbs"
 THUMBNAIL_SIZE="350x200"
 GRID_ROWS=2
