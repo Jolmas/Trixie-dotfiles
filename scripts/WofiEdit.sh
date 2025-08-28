@@ -22,29 +22,29 @@ wofi_command="wofi --dmenu \
 			--matching=fuzzy"
 
 menu(){
-	printf "1. Configure_Labwc\n"
-	printf "2. Configure_Waybar\n"
-	printf "3. Configure_Autostart\n"
-	printf "4. Temas_Waybar\n"
+	printf "1. Editar este Menu\n"
+	printf "2. Módulos de Waybar\n"
+	printf "3. Configure Labwc\n"
+	printf "4. Configure Autostart\n"
 } 
 
 main() {
     choice=$(menu | ${wofi_command} | cut -d. -f1)
     case $choice in
-    1) 
-        foot micro "$labDir/rc.xml"
+	1)
+        foot micro "$SCRIPTS/WofiEdit.sh"
         exit 0
         ;;
-    2)
+	2)
         foot micro "$waybarDir/config-default"
         exit 0
         ;;
-    3)
-        foot micro "$labDir/autostart"
+    3) 
+        foot micro "$labDir/rc.xml"
         exit 0
         ;;
     4)
-        $SCRIPTS/WayStyle.sh
+        foot micro "$labDir/autostart"
         exit 0
         ;;
     *)

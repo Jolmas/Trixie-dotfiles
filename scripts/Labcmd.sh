@@ -27,7 +27,7 @@ selected=$(echo "$KEYBINDS_RAW" | rofi -dmenu -i -p "LabWC Keybinds" -config "$R
 if [[ -n "$selected" ]]; then
     # Extrae el comando de la segunda columna usando 'awk'
     # Esto es crucial para manejar comandos con espacios o argumentos
-    cmd=$(echo "$selected" | awk -F'|' '{print $2}' | xargs)
+    cmd=$(echo "$selected" | awk -F'=' '{print $2}' | xargs)
     
     # Ejecuta el comando en segundo plano
     if [[ -n "$cmd" ]]; then

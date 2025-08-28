@@ -57,21 +57,29 @@ printf '%b\n' '<?xml version="1.0" encoding="UTF-8"?>
 printf '%b\n' '<separator />
    <menu id="40" label="LabWC" icon="labwc-tweaks-gtk">
             <menu id="client-list-menu"/>
-            	<item label="Editar Ajustes" icon="systemsettings">
-              		<action name="Execute"><command>~/.config/scripts/WofiEdit.sh</command>
-              		</action>
-            	</item>
-            	<item label="Actualizar Menú" icon="systemsettings">
+            	<item label="Actualizar Menú" icon="menulibre">
               		<action name="Execute"><command>~/.config/scripts/update-lwmenu.sh</command>
               		</action>
             	</item>
-	    		<item label="Temas" icon="labwc-tweaks-gtk">
+	    		<item label="Cambiar Wallpaper" icon="preferences-desktop-wallpaper">
+              		<action name="Execute"><command>~/.config/scripts/WpSel.sh</command>
+              		</action>
+	    		</item>
+            	<item label="Estilo de Waybar" icon="dock">
+              		<action name="Execute"><command>~/.config/scripts/WayStyle.sh</command>
+              		</action>
+            	</item>
+				<item label="Temas LabWC" icon="preferences-desktop-color">
     	  			<action name="Execute"><command>~/.config/scripts/LabwcTheme.sh</command></action>
     			</item>
 	    		<item label="Tweaks" icon="labwc-tweaks-gtk">
     	  			<action name="Execute"><command>labwc-tweaks-gtk</command></action>
     			</item>
-            	<item label="Aplicar Ajustes" icon="labwc-tweaks-gtk"> 
+            	<item label="Ajustes Avanzados" icon="gedit">
+              		<action name="Execute"><command>~/.config/scripts/WofiEdit.sh</command>
+              		</action>
+            	</item>
+				<item label="Aplicar Ajustes" icon="grsync"> 
     	  			<action name="Execute"><command>~/.config/scripts/reload.sh</command></action>
             	</item>
      	</menu>
