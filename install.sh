@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing..."
+echo "Installing configuration files..."
 
 # -------------------------
 # Directories
@@ -8,22 +8,48 @@ echo "Installing..."
 src="./"
 dest="$HOME/.config"
 
+# --- List of directories to install ---
+config_dirs=(
+    "dunst"
+    "labwc"
+    "scripts"
+    "swaylock"
+    "tofi"
+    "waybar"
+    "wlogout"
+    "wofi"
+)
+
+# --- Installation function ---
 install() {
-    local src=$1
-    local dest=$2
-    echo "Installing $src..."
-    cp -r "$src/dunst" "$dest"
-    cp -r "$src/labwc" "$dest"
-    cp -r "$src/scripts" "$dest"
-    cp -r "$src/swaylock" "$dest"
-    cp -r "$src/tofi" "$dest"
-    cp -r "$src/waybar" "$dest"
-    cp -r "$src/wlogout" "$dest"
-    cp -r "$src/wofi" "$dest"
+    local source_dir=$1
+    local destination_dir=$2
+    
+    # Check if source directory exists
+    if [ ! -d "$source_dir" ]; then
+        echo "Error: Source directory '$source_dir' not found. Exiting."
+        exit 1
+    fi
+
+    # Create destination directory if it doesn't exist
+    if [ ! -d "$destination_dir" ]; then
+        echo "Creating destination directory: $destination_dir"
+        mkdir -p "$destination_dir"
+    fi
+    
+    for dir in "${config_dirs[@]}"; do
+        if [ -d "$source_dir/$dir" ]; then
+            echo "Installing $dir..."
+            cp -r "$source_dir/$dir" "$destination_dir"
+        else
+            echo "Warning: Directory '$dir' not found in source. Skipping."
+        fi
+    done
 }
 
+# --- Run installation ---
 install "$src" "$dest"
 
 echo ""
-echo "Installation complete!"
+echo "Installation complete! 🎉"
 echo ""
