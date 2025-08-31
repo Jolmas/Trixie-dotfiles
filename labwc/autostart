@@ -26,12 +26,12 @@ mpd &
 # kanshi >/dev/null 2>&1 &
 
 # Theme Settings
-/home/luism/.config/scripts/temagtk.sh >/dev/null 2>&1 &
-/home/luism/.config/scripts/temaico.sh >/dev/null 2>&1 &
+~/.config/scripts/temagtk.sh >/dev/null 2>&1 &
+~/.config/scripts/temaico.sh >/dev/null 2>&1 &
 gsettings set org.gnome.desktop.desktop.wm.preferences button-layout "menu:minimize,maximize,close" &
 
 # Launch panel waybar.
-/home/luism/.config/scripts/Waybar.sh >/dev/null 2>&1 &
+~/.config/scripts/Waybar.sh >/dev/null 2>&1 &
 
 # NetworkManager 
 nm-applet &
