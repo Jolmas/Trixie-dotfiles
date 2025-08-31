@@ -1,5 +1,6 @@
 ## LabWC-dotfiles
 
+The version used in this installation is [Debian 13 Live XFCE](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.0.0-amd64-xfce.iso)
 
 <div align="center">
 
