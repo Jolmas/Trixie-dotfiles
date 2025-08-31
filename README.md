@@ -47,7 +47,7 @@ wstmp.sh
 
 `Labcmd.sh` = Show LabWC active command keybinds
 
-`WpSel.sh` = Change Wallpaper
+`WpSel.sh` = Change Wallpaper (require: ImageMagick)
 
 `ScreenShot.sh` = Screenshooter
 
@@ -74,6 +74,7 @@ wstmp.sh
 - `labwc`
 - `dunst`
 - `swaylock`
+- `swaybg`
 - `tofi`
 - `waybar`
 - `wlogout`
@@ -81,4 +82,3 @@ wstmp.sh
 - `copyq`
 - `wlsunset`
 - `foot`
-
