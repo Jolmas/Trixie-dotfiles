@@ -1,0 +1,84 @@
+## LabWC-dotfiles
+
+
+<div align="center">
+
+  ![imgs](/images/screenshot.png)
+
+</div>
+
+## Installation
+
+Install all of the [required packages](#required-packages). Then, run the install script.
+
+```bash
+sh install.sh
+```
+
+## Included Scripts
+
+- Scripts used by Waybar
+
+`GrimShot.sh` = Screenshot (require: grim, slurp, swaymsg, wl-copy, jq and notify-send)
+
+`LabwcTheme.sh`= Theme Changer
+
+`LockScreen.sh` = Screen locker
+
+`Volume.sh` = Volume manager
+
+Trick for Workspaces on Waybar
+
+```
+WSpaces.sh 
+wsactive.sh
+wsactive1.sh
+wsactive2.sh
+wsactive3.sh
+wsactive4.sh
+wstmp.sh
+```
+
+`xupdate` Search and apply updates (require: nala)
+
+- Scripts used by LabWC
+
+`Waybar.sh` = Start waybar
+
+`Labcmd.sh` = Show LabWC active command keybinds
+
+`WpSel.sh` = Change Wallpaper
+
+`ScreenShot.sh` = Screenshooter
+
+`wofi-light.sh` = Launch wofi
+ 
+`ShowDesk.sh` = Minimize all windows (require: wlrctl)
+
+`update-lwmenu.sh` = Launch update-menu.sh saving to ~/config/labwc/menu.xml 
+
+`update-menu.sh` = Update menu with presets (require: labwc-menu-generator)
+
+`WayStyle.sh` = Change waybar style
+
+`WofiEdit.sh` = Launch advanced settings
+ 
+`reload.sh` = Reload labwc configuration
+
+`temagtk.sh` = Load gtk theme settings at startup
+
+`temaico.sh` = Load icons settings at startup
+
+## Required Packages
+
+- `labwc`
+- `dunst`
+- `swaylock`
+- `tofi`
+- `waybar`
+- `wlogout`
+- `wofi`
+- `copyq`
+- `wlsunset`
+- `foot`
+
