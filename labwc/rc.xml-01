@@ -65,8 +65,8 @@
   <keyboard>
     <default/>
     <!-- Use a different terminal emulator -->
-    <keybind key="W-a">
-      <action name="ShowMenu" menu="root-menu"/>
+    <keybind key="W-t">
+      <action name="Execute" command="foot"/>
     </keybind>
     <keybind key="W-b">
       <action name="Execute" command="fsearch"/>
@@ -80,17 +80,23 @@
     <keybind key="W-f">
       <action name="Execute" command="thunar"/>
     </keybind>
-    <keybind key="W-m">
-      <action name="Execute" command="audacious"/>
+    <keybind key="W-F1">
+      <action name="Execute" command="/home/luism/.config/scripts/Labcmd.sh"/>
+    </keybind>
+    <keybind key="W-F11">
+      <action name="Execute" command="/home/luism/.config/scripts/LabwcTheme.sh"/>
+    </keybind>
+    <keybind key="W-F12">
+      <action name="Execute" command="/home/luism/.config/scripts/WpSel.sh"/>
     </keybind>
     <keybind key="W-n">
       <action name="Execute" command="foot -T Ncmpcpp ncmpcpp"/>
     </keybind>
+    <keybind key="W-m">
+      <action name="Execute" command="audacious"/>
+    </keybind>
     <keybind key="W-p">
       <action name="Execute" command="wl-color-picker"/>
-    </keybind>
-    <keybind key="W-q">
-      <action name="Execute" command="/usr/bin/wlogout"/>
     </keybind>
     <keybind key="W-r">
       <action name="Execute" command="rofi -show run -prompt Ejecutar -config ~/.config/rofi/themes/runbox/config.rasi -theme ~/.config/rofi/themes/runbox/runbox-dark.rasi "/>
@@ -98,31 +104,22 @@
     <keybind key="W-s">
       <action name="PreviousWindow"/>
     </keybind>
-    <keybind key="W-t">
-      <action name="Execute" command="foot"/>
+    <keybind key="print">
+      <action name="Execute" command="/home/luism/.config/scripts/ScreenShot.sh --in5"/>
     </keybind>
-    <keybind key="W-v">
+    <keybind key="C-print">
+      <action name="Execute" command="/home/luism/.config/scripts/ScreenShot.sh --area"/>
+    </keybind>
+	<keybind key="W-v">
       <action name="Execute" command="com.github.babluboy.bookworm"/>
     </keybind>
     <keybind key="W-w">
-      <action name="Execute" command="~/.local/share/zen/zen"/>
-    </keybind>
-    <keybind key="W-F1">
-      <action name="Execute" command="~/.config/scripts/Labcmd.sh"/>
-    </keybind>
-    <keybind key="W-F11">
-      <action name="Execute" command="~/.config/scripts/LabwcTheme.sh"/>
-    </keybind>
-    <keybind key="W-F12">
-      <action name="Execute" command="~/.config/scripts/WpSel.sh"/>
-    </keybind>
-    <keybind key="print">
-      <action name="Execute" command="~/.config/scripts/ScreenShot.sh --in5"/>
-    </keybind>
-    <keybind key="C-print">
-      <action name="Execute" command="~/.config/scripts/ScreenShot.sh --area"/>
+      <action name="Execute" command="/home/luism/.local/share/zen/zen"/>
     </keybind>
     <keybind key="C-A-Delete">
+      <action name="Execute" command="/usr/bin/wlogout"/>
+    </keybind>
+    <keybind key="W-q">
       <action name="Execute" command="/usr/bin/wlogout"/>
     </keybind>
     <keybind key="W-KP_Up">
@@ -132,7 +129,7 @@
       <action name="Execute" command="pulsemixer --change-volume -1"/>
     </keybind>
     <keybind key="W-'">
-      <action name="Execute" command="~/bin/labk.sh"/>
+      <action name="Execute" command="/home/luism/bin/labk.sh"/>
     </keybind>
     <keybind key="C-Escape">
       <action name="Execute" command="foot -T htop htop"/>
@@ -203,7 +200,7 @@
       <action name="Execute" command="anyrun"/>
     </keybind>
     <keybind key="A-F9">
-      <action name="Execute" command="~/bin/wofiradion.sh"/>
+      <action name="Execute" command="~/bin/Wofi-Lofi.sh"/>
     </keybind>
     <!-- Resize active window -->
     <keybind key="W-S-r">
@@ -262,6 +259,10 @@
     <keybind key="W-S-down">
       <action name="SendToDesktop" to="4"/>
       <action name="Execute" command="~/.config/scripts/wstmp.sh 4"/>
+    </keybind>
+    <!-- Misc -->
+    <keybind key="W-a">
+      <action name="ShowMenu" menu="root-menu"/>
     </keybind>
     <keybind key="Menu">
       <action name="ShowMenu" menu="root-menu"/>
