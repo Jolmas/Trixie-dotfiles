@@ -364,28 +364,28 @@
 
 "custom/wsactive1": {
     "format": "{} ",
-    "interval": 10,
+    "interval": 2,
     "exec": "~/.config/scripts/wsactive1.sh",
     "on-click": "wtype -M ctrl -M alt -k Left -m ctrl -m alt 2> /dev/null",
 	"tooltip": "false"
 },
 "custom/wsactive2": {
     "format": "{} ",
-    "interval": 10,
+    "interval": 2,
     "exec": "~/.config/scripts/wsactive2.sh",
     "on-click": "wtype -M ctrl -M alt -k Right -m ctrl -m alt 2> /dev/null",
 	"tooltip": "false"
 },
 "custom/wsactive3": {
     "format": "{} ",
-    "interval": 10,
+    "interval": 2,
     "exec": "~/.config/scripts/wsactive3.sh",
     "on-click": "wtype -M ctrl -M alt -k Up -m ctrl -m alt 2> /dev/null",
 	"tooltip": "false"
 },
 "custom/wsactive4": {
     "format": "{} ",
-    "interval": 10,
+    "interval": 2,
     "exec": "~/.config/scripts/wsactive4.sh",
     "on-click": "wtype -M ctrl -M alt -k Down -m ctrl -m alt 2> /dev/null",
 	"tooltip": "false"

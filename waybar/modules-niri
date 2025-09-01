@@ -237,7 +237,7 @@
 
 "custom/cycle_wall": {
   "format":" ",
-  "on-click": "~/.config/scripts/WpSel.sh",
+  "on-click": "~/.config/scripts/NiriWalp.sh",
   "on-click-right": "~/.config/scripts/GrimShot.sh --notify save screen",
   "tooltip": true,
   "tooltip-format": "1🖯: Fondo 3🖱: Captura: ",
@@ -324,7 +324,7 @@
 
 "custom/wsactive1": {
     "format": "{} ",
-    "interval": 2,
+    "interval": 10,
     "exec": "~/.config/scripts/wsactive1.sh",
     "on-click": "wtype -M ctrl -M alt -k Left -m ctrl -m alt 2> /dev/null",
 	"tooltip": "true",
@@ -332,7 +332,7 @@
 },
 "custom/wsactive2": {
     "format": "{} ",
-    "interval": 2,
+    "interval": 10,
     "exec": "~/.config/scripts/wsactive2.sh",
     "on-click": "wtype -M ctrl -M alt -k Right -m ctrl -m alt 2> /dev/null",
 	"tooltip": "true",
@@ -340,7 +340,7 @@
 },
 "custom/wsactive3": {
     "format": "{} ",
-    "interval": 2,
+    "interval": 10,
     "exec": "~/.config/scripts/wsactive3.sh",
     "on-click": "wtype -M ctrl -M alt -k Up -m ctrl -m alt 2> /dev/null",
 	"tooltip": "true",
@@ -348,7 +348,7 @@
 },
 "custom/wsactive4": {
     "format": "{} ",
-    "interval": 2,
+    "interval": 10,
     "exec": "~/.config/scripts/wsactive4.sh",
     "on-click": "wtype -M ctrl -M alt -k Down -m ctrl -m alt 2> /dev/null",
 	"tooltip": "true",

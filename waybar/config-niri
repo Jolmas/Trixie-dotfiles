@@ -1,6 +1,6 @@
 {
 
-"include": "~/.config/waybar/modules-2",
+"include": "~/.config/waybar/modules-niri",
 "layer": "top",
 //"mode": "dock",
 "exclusive": true,

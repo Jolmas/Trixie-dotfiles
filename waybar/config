@@ -1,17 +1,18 @@
 {
 
-"include": "~/.config/waybar/modules-2",
+"include": "~/.config/waybar/modules-niri",
 "layer": "top",
-//"mode": "dock",
+"mode": "dock",
 "exclusive": true,
 "passthrough": false,
 "position": "top",
-"spacing": 3,
+"spacing": 4,
 "fixed-center": true,
 "ipc": true,
-"margin-top": 3,
-"margin-left": 4,
-"margin-right": 4,
+"margin-top": 1,
+"margin-left": 8,
+"margin-right": 8,
+"expand-center": false,
 
 "modules-left": [
 	"cpu",
