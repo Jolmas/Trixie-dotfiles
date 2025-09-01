@@ -12,8 +12,9 @@ The version used in this installation is [Debian 13 Live XFCE](https://cdimage.d
 
 Install all of the [required packages](#required-packages). Then, run the install script.
 
-```bash
-sh install.sh
+```
+chmod +x install.sh
+./install.sh
 ```
 
 ## Included Scripts
@@ -48,7 +49,7 @@ wstmp.sh
 
 `Labcmd.sh` = Show LabWC active command keybinds
 
-`WpSel.sh` = Change Wallpaper (require: ImageMagick)
+`WpSel.sh` = Change Wallpaper (require: ImageMagick, create directory ~/Pictures/Wallpapers and copy your images inside)
 
 `ScreenShot.sh` = Screenshooter
 
@@ -69,6 +70,8 @@ wstmp.sh
 `temagtk.sh` = Load gtk theme settings at startup
 
 `temaico.sh` = Load icons settings at startup
+
+`getnf` = Install Nerd Fonts needed for Wayland icons
 
 ## Required Packages
 

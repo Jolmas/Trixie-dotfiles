@@ -49,7 +49,10 @@ install() {
 
 # --- Run installation ---
 install "$src" "$dest"
+chmod +x ~/.config/scripts/*
+cp ~/.config/scripts/azotebg ~/.azotebg
 
 echo ""
 echo "Installation complete! 🎉"
 echo ""
+
