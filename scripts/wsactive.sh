@@ -2,5 +2,5 @@
 
 ARCHIVO_SALIDA="$HOME/.cache/wspace"
 
-cat "$ARCHIVO_SALIDA"
+printf "%s\n" "$ARCHIVO_SALIDA"
 

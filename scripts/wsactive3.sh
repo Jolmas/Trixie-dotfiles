@@ -2,5 +2,5 @@
 
 ARCHIVO_SALIDA="$HOME/.cache/wspace3"
 
-cat "$ARCHIVO_SALIDA"
+printf \%s\ $(<$ARCHIVO_SALIDA)\
 
