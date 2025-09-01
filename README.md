@@ -86,6 +86,5 @@ wstmp.sh
 - `copyq`
 - `wlsunset`
 - `foot`
+- `micro`
 -  Download and install the Themes LabWC `git clone https://github.com/Jolmas/LabWC.git`
-
-
