@@ -1,0 +1,59 @@
+# Example autostart file
+
+# Set background and nightshift
+~/.azotebg
+wlsunset -l 9.07 -L -69.81 -T 5700 -t 5000 -g 0.8 >/dev/null 2>&1 & # latitude and Longitude
+
+# Automount disks
+# udiskie -at &
+
+# Music Player Daemon
+mpd &
+
+# Authentication Agent
+/usr/libexec/polkit-mate-authentication-agent-1 &
+
+# Sound Quality
+#easyeffects --gapplication-service &
+
+# Configure output directives such as mode, position, scale and transform.
+# Use wlr-randr to get your output names
+# Example ~/.config/kanshi/config below:
+#   profile {
+#     output HDMI-A-1 position 1366,0
+#     output eDP-1 position 0,0
+#   }
+# kanshi >/dev/null 2>&1 &
+
+# Theme Settings
+~/.config/scripts/temagtk.sh >/dev/null 2>&1 &
+~/.config/scripts/temaico.sh >/dev/null 2>&1 &
+gsettings set org.gnome.desktop.desktop.wm.preferences button-layout "menu:minimize,maximize,close" &
+
+# Launch panel waybar.
+~/.config/scripts/Waybar.sh >/dev/null 2>&1 &
+
+# NetworkManager 
+nm-applet &
+
+# Clipboard 
+copyq --start-server &
+
+# Launch worspaces on waybar.
+~/.config/scripts/wstmp.sh 1>/dev/null 2>&1 &
+
+# Enable notifications. Typically GNOME/KDE application notifications go
+# through the org.freedesktop.Notifications D-Bus API and require a client such
+# as mako to function correctly. Thunderbird is an example of this.
+# swaync >/dev/null 2>&1 &
+dunst &
+
+# Lock screen after 5 minutes; turn off display after another 5 minutes.
+#
+# Note that in the context of idle system power management, it is *NOT* a good
+# idea to turn off displays by 'disabling outputs' for example by
+# `wlr-randr --output <whatever> --off` because this re-arranges views
+# (since a837fef). Instead use a wlr-output-power-management client such as
+# https://git.sr.ht/~leon_plickat/wlopm
+# swayidle -w timeout 600 ~/.config/scripts/LockScreen.sh >/dev/null 2>&1 &
+notify-send "Hola $USER..!"
