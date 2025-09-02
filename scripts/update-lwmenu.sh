@@ -3,7 +3,7 @@
 # Variables para mejorar la legibilidad y mantenibilidad
 MENU_CONFIG="$HOME/.config/labwc/menu.xml"
 UPDATE_MENU_SCRIPT="$HOME/.config/scripts/update-menu.sh"
-NOTIFICATION_MESSAGE="Menú LabWC Actualizado"
+NOTIFICATION_MESSAGE="LabWC Menu updated"
 
 # Verificar si el script de actualización existe y es ejecutable
 if [ ! -x "$UPDATE_MENU_SCRIPT" ]; then
