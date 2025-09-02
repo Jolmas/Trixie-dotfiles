@@ -1,6 +1,6 @@
 #!/bin/bash
 
-THEME_FILE="/home/luism/.gtkrc-2.0"
+THEME_FILE="$HOME/.gtkrc-2.0"
 
 echo "Extrayendo el nombre del tema del archivo: $THEME_FILE"
 
