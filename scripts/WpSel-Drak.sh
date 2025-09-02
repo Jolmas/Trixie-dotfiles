@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-WALLPAPER_DIR="$HOME/Imágenes/Wallpapers"
+WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 CACHE_FILE="$HOME/.cache/wallpaper_index.txt"
 ROFI_CONFIG="$HOME/.config/rofi/config-wallpaper.rasi"
 THUMBNAIL_DIR="$HOME/.cache/wallpaper-thumbs"
