@@ -194,9 +194,6 @@
     <item label="Teclado" icon="org.xfce.settings.keyboard">
       <action name="Execute"><command>xfce4-keyboard-settings</command></action>
     </item>
-    <item label="TeXdoctk">
-      <action name="Execute"><command>texdoctk</command></action>
-    </item>
     <item label="Áreas de trabajo" icon="org.xfce.workspaces">
       <action name="Execute"><command>xfwm4-workspace-settings</command></action>
     </item>
@@ -285,9 +282,6 @@
     </item>
   </menu> <!-- Multimedia -->
   <menu id="Office" label="Oficina" icon="applications-office">
-    <item label="Beaver-notes" icon="beaver-notes">
-      <action name="Execute"><command>/opt/Beaver-notes/beaver-notes</command></action>
-    </item>
     <item label="Bookworm" icon="com.github.babluboy.bookworm">
       <action name="Execute"><command>com.github.babluboy.bookworm</command></action>
     </item>
@@ -302,9 +296,6 @@
     </item>
     <item label="qpdfview" icon="qpdfview">
       <action name="Execute"><command>qpdfview --unique</command></action>
-    </item>
-    <item label="ReText" icon="retext">
-      <action name="Execute"><command>/usr/bin/retext</command></action>
     </item>
     <item label="Zathura" icon="org.pwmt.zathura">
       <action name="Execute"><command>zathura</command></action>

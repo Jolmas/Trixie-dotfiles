@@ -8,7 +8,7 @@ wlsunset -l 9.07 -L -69.81 -T 5700 -t 5000 -g 0.8 >/dev/null 2>&1 & # latitude a
 # udiskie -at &
 
 # Music Player Daemon
-~/bin/mpd.sh &
+mpd &
 
 # Authentication Agent
 /usr/libexec/polkit-mate-authentication-agent-1 &
@@ -39,14 +39,14 @@ nm-applet &
 # Clipboard 
 copyq --start-server &
 
+# Launch worspaces on waybar.
+~/.config/scripts/wstmp.sh 1>/dev/null 2>&1 &
+
 # Enable notifications. Typically GNOME/KDE application notifications go
 # through the org.freedesktop.Notifications D-Bus API and require a client such
 # as mako to function correctly. Thunderbird is an example of this.
 # swaync >/dev/null 2>&1 &
 dunst &
-
-# Launch workspaces waybar.
-~/.config/scripts/wstmp.sh 1 >/dev/null 2>&1 &
 
 # Lock screen after 5 minutes; turn off display after another 5 minutes.
 #
@@ -56,5 +56,4 @@ dunst &
 # (since a837fef). Instead use a wlr-output-power-management client such as
 # https://git.sr.ht/~leon_plickat/wlopm
 # swayidle -w timeout 600 ~/.config/scripts/LockScreen.sh >/dev/null 2>&1 &
-
 notify-send "Hola $USER..!"
