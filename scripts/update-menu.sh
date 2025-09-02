@@ -83,7 +83,7 @@ printf '%b\n' '<separator />
     	  			<action name="Execute"><command>~/.config/scripts/reload.sh</command></action>
             	</item>
      	</menu>
-            <item label="Exit" icon="session-properties">
+            <item label="Logout" icon="session-properties">
               <action name="Execute"><command>wlogout</command>
               </action>
             </item>
