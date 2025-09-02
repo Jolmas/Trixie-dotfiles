@@ -10,7 +10,7 @@ HEIGHT=50
 
 ## Wofi Command
 wofi_command="wofi --show dmenu \
-			--prompt Seleccione...
+			--prompt Select...
 			--conf $CONFIG --style $STYLE --color $COLORS \
 			--width=$WIDTH% --height=$HEIGHT% \
 			--cache-file=/dev/null \
