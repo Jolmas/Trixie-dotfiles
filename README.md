@@ -79,7 +79,7 @@ wstmp.sh
 - `dunst`
 - `swaylock`
 - `swaybg`
-- `tofi`
+- `rofi`
 - `waybar`
 - `wlogout`
 - `wofi`
