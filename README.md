@@ -33,7 +33,6 @@ chmod +x install.sh
 
 ```
 WSpaces.sh 
-wsactive.sh
 wsactive1.sh
 wsactive2.sh
 wsactive3.sh
