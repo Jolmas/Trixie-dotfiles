@@ -240,7 +240,7 @@
   "on-click": "~/.config/scripts/WpSel.sh",
   "on-click-right": "~/.config/scripts/GrimShot.sh --notify save screen",
   "tooltip": true,
-  "tooltip-format": "1🖯: Fondo 3🖱: Captura: ",
+  "tooltip-format": "1🖯: Wallpaper 3🖱: Screenshot: ",
 },
 
 "custom/light_dark": {
@@ -254,7 +254,7 @@
   "on-click": "wlogout",
   "on-click-right": "~/.config/scripts/LockScreen.sh",
   "tooltip": true,
-  "tooltip-format": "1🖯: Salir 3🖱: Bloquear Pantalla",
+  "tooltip-format": "1🖯: Logout 3🖱: Lock Screen",
 },
 
 "custom/menu": {
@@ -262,13 +262,13 @@
   "on-click": "~/.config/scripts/Wofi.sh",
   "on-click-right": "$HOME/.config/scripts/LabwcTheme.sh",
   "tooltip": true,
-  "tooltip-format": "1🖯: Apps 3🖱: Temas",
+  "tooltip-format": "1🖯: Apps 3🖱: Themes",
 },
 
 "custom/power": {
   "format": "",
   "tooltip": false,
-  "tooltip-format": "1🖯: Salir",
+  "tooltip-format": "1🖯: Logout",
   //"on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
   "on-click": "/usr/bin/wlogout",
   //"on-click-right": "~/.config/scripts/ChangeBlur.sh",
@@ -278,14 +278,14 @@
   "format": "  {}",
   "on-click": "foot ~/.config/scripts/xupdate",
   "tooltip": true,
-  "tooltip-format": "Actualizar Sistema",
+  "tooltip-format": "System Update",
 },
 
 "custom/clipboard":{
   "format": " {}",
   "on-click": "copyq toggle",
   "tooltip": true,
-  "tooltip-format": "Portapapeles",
+  "tooltip-format": "Clipboard",
 },
 
 "custom/weather": {
@@ -328,7 +328,7 @@
     "exec": "~/.config/scripts/wsactive1.sh",
     "on-click": "wtype -M ctrl -M alt -k Left -m ctrl -m alt 2> /dev/null",
 	"tooltip": "true",
-    "tooltip-format": "Escritorio 1"
+    "tooltip-format": "Workspace 1"
 },
 "custom/wsactive2": {
     "format": "{} ",
@@ -336,7 +336,7 @@
     "exec": "~/.config/scripts/wsactive2.sh",
     "on-click": "wtype -M ctrl -M alt -k Right -m ctrl -m alt 2> /dev/null",
 	"tooltip": "true",
-    "tooltip-format": "Escritorio 2"
+    "tooltip-format": "Workspace 2"
 },
 "custom/wsactive3": {
     "format": "{} ",
@@ -344,7 +344,7 @@
     "exec": "~/.config/scripts/wsactive3.sh",
     "on-click": "wtype -M ctrl -M alt -k Up -m ctrl -m alt 2> /dev/null",
 	"tooltip": "true",
-    "tooltip-format": "Escritorio 3"
+    "tooltip-format": "Workspace 3"
 },
 "custom/wsactive4": {
     "format": "{} ",
@@ -352,7 +352,7 @@
     "exec": "~/.config/scripts/wsactive4.sh",
     "on-click": "wtype -M ctrl -M alt -k Down -m ctrl -m alt 2> /dev/null",
 	"tooltip": "true",
-    "tooltip-format": "Escritorio 4"
+    "tooltip-format": "Workspace 4"
 },
 
 "sway/workspaces": {
