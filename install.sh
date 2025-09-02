@@ -18,6 +18,7 @@ config_dirs=(
     "waybar"
     "wlogout"
     "wofi"
+    "foot"
 )
 
 # --- Installation function ---
