@@ -14,7 +14,7 @@ waybarDir="$HOME/.config/waybar"
 
 
 wofi_command="wofi --dmenu \
-			--prompt seleccione... \
+			--prompt select... \
 			--conf $CONFIG --style $STYLE --color $COLORS \
 			--width=$WOFI_WIDTH% --height=$WOFI_HEIGHT% \
 			--cache-file=/dev/null \
@@ -22,8 +22,8 @@ wofi_command="wofi --dmenu \
 			--matching=fuzzy"
 
 menu(){
-	printf "1. Editar este Menu\n"
-	printf "2. Módulos de Waybar\n"
+	printf "1. Edit this Menu\n"
+	printf "2. Edit Waybar modules\n"
 	printf "3. Configure Labwc\n"
 	printf "4. Configure Autostart\n"
 } 
