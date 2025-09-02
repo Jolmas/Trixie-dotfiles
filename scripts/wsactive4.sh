@@ -2,5 +2,5 @@
 
 ARCHIVO_SALIDA="/tmp/wspace4"
 
-printf %s $(<$ARCHIVO_SALIDA)
+printf "%s" "$(<$ARCHIVO_SALIDA)"
 
