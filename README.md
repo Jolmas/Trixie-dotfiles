@@ -19,7 +19,7 @@ chmod +x install.sh
 
 ## Included Scripts
 
-- Scripts used by Waybar
+#### Scripts used by Waybar
 
 `GrimShot.sh` = Screenshot (require: grim, slurp, swaymsg, wl-copy, jq and notify-send)
 
@@ -29,7 +29,7 @@ chmod +x install.sh
 
 `Volume.sh` = Volume manager
 
-Trick for Workspaces on Waybar
+**Trick for Workspaces on Waybar**
 
 ```
 WSpaces.sh 
@@ -40,10 +40,9 @@ wsactive3.sh
 wsactive4.sh
 wstmp.sh
 ```
-
 `xupdate` Search and apply updates (require: nala)
 
-- Scripts used by LabWC
+#### Scripts used by LabWC
 
 `Waybar.sh` = Start waybar
 
