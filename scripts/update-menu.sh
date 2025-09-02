@@ -45,7 +45,7 @@ printf '%b\n' '<?xml version="1.0" encoding="UTF-8"?>
     <item label="Terminal" icon="konsole">
       <action name="Execute"><command>foot</command></action>
     </item>
-	<item label="Archivos" icon="org.kde.dolphin">
+	<item label="Files" icon="org.kde.dolphin">
       <action name="Execute"><command>thunar</command></action>
     </item>
   <separator />'
@@ -57,33 +57,33 @@ printf '%b\n' '<?xml version="1.0" encoding="UTF-8"?>
 printf '%b\n' '<separator />
    <menu id="40" label="LabWC" icon="labwc-tweaks-gtk">
             <menu id="client-list-menu"/>
-            	<item label="Actualizar Menú" icon="menulibre">
+            	<item label="Update Menu" icon="menulibre">
               		<action name="Execute"><command>~/.config/scripts/update-lwmenu.sh</command>
               		</action>
             	</item>
-	    		<item label="Cambiar Wallpaper" icon="preferences-desktop-wallpaper">
+	    		<item label="Change Wallpaper" icon="preferences-desktop-wallpaper">
               		<action name="Execute"><command>~/.config/scripts/WpSel.sh</command>
               		</action>
 	    		</item>
-            	<item label="Estilo de Waybar" icon="dock">
+            	<item label="Waybar Style" icon="dock">
               		<action name="Execute"><command>~/.config/scripts/WayStyle.sh</command>
               		</action>
             	</item>
-				<item label="Temas LabWC" icon="preferences-desktop-color">
+				<item label="Themes LabWC" icon="preferences-desktop-color">
     	  			<action name="Execute"><command>~/.config/scripts/LabwcTheme.sh</command></action>
     			</item>
 	    		<item label="Tweaks" icon="labwc-tweaks-gtk">
     	  			<action name="Execute"><command>labwc-tweaks-gtk</command></action>
     			</item>
-            	<item label="Ajustes Avanzados" icon="gedit">
+            	<item label="Advanced Settings" icon="gedit">
               		<action name="Execute"><command>~/.config/scripts/WofiEdit.sh</command>
               		</action>
             	</item>
-				<item label="Aplicar Ajustes" icon="grsync"> 
+				<item label="Apply Changes" icon="grsync"> 
     	  			<action name="Execute"><command>~/.config/scripts/reload.sh</command></action>
             	</item>
      	</menu>
-            <item label="Salir" icon="session-properties">
+            <item label="Exit" icon="session-properties">
               <action name="Execute"><command>wlogout</command>
               </action>
             </item>
