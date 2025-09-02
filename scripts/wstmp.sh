@@ -2,11 +2,12 @@
 
 # Define la ruta del archivo de forma segura.
 # Usar $HOME es una buena práctica para la portabilidad.
-ARCHIVO_SALIDA="/tmp/wspace"
+ARCHIVO_SALIDA="/tmp/wspace_$(whoami)"
 ACTIVE="$HOME/.config/scripts/WSpaces.sh"
 # Verifica si se proporcionó un argumento.
 if [ -z "$1" ]; then
     echo "Error: Debes proporcionar un argumento para guardar."
+    echo "Uso: ./guardar.sh \"texto a guardar\""
     exit 1
 fi
 

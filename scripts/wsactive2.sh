@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ARCHIVO_SALIDA="/tmp/wspace2"
+ARCHIVO_SALIDA="/tmp/wspace2_$(whoami)"
 
-printf "%s" "$(<$ARCHIVO_SALIDA)"
+printf %s $(<$ARCHIVO_SALIDA)
 
