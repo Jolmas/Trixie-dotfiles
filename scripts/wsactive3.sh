@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ARCHIVO_SALIDA="$HOME/.cache/wspace3"
+ARCHIVO_SALIDA="/tmp/wspace3"
 
-printf \%s\ $(<$ARCHIVO_SALIDA)\
+printf %s $(<$ARCHIVO_SALIDA)
 

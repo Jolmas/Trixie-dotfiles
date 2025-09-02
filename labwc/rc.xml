@@ -145,6 +145,9 @@
       <action name="None"/>
     </keybind>
     <!-- Window management -->
+    <keybind key="W-l">
+      <action name="Lower"/>
+    </keybind>
     <keybind key="W-space">
       <action name="ToggleMaximize"/>
     </keybind>

@@ -2,7 +2,7 @@
 
 # Define la ruta del archivo de forma segura.
 # Usar $HOME es una buena práctica para la portabilidad.
-ARCHIVO_SALIDA="$HOME/.cache/wspace"
+ARCHIVO_SALIDA="/tmp/wspace"
 ACTIVE="$HOME/.config/scripts/WSpaces.sh"
 # Verifica si se proporcionó un argumento.
 if [ -z "$1" ]; then

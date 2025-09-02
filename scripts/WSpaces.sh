@@ -1,11 +1,11 @@
 #!/bin/bash
 
-CACHE_DIR="$HOME/.cache"
-ARCHIVO_0="$CACHE_DIR/wspace"
-ARCHIVO_1="$CACHE_DIR/wspace1"
-ARCHIVO_2="$CACHE_DIR/wspace2"
-ARCHIVO_3="$CACHE_DIR/wspace3"
-ARCHIVO_4="$CACHE_DIR/wspace4"
+TMP_DIR="/tmp"
+ARCHIVO_0="$TMP_DIR/wspace"
+ARCHIVO_1="$TMP_DIR/wspace1"
+ARCHIVO_2="$TMP_DIR/wspace2"
+ARCHIVO_3="$TMP_DIR/wspace3"
+ARCHIVO_4="$TMP_DIR/wspace4"
 
 contenido0=$(cat "$ARCHIVO_0" 2>/dev/null)
 

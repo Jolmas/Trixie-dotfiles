@@ -8,7 +8,7 @@ wlsunset -l 9.07 -L -69.81 -T 5700 -t 5000 -g 0.8 >/dev/null 2>&1 & # latitude a
 # udiskie -at &
 
 # Music Player Daemon
-mpd &
+~/bin/mpd.sh &
 
 # Authentication Agent
 /usr/libexec/polkit-mate-authentication-agent-1 &
@@ -45,6 +45,9 @@ copyq --start-server &
 # swaync >/dev/null 2>&1 &
 dunst &
 
+# Launch workspaces waybar.
+~/.config/scripts/wstmp.sh 1 >/dev/null 2>&1 &
+
 # Lock screen after 5 minutes; turn off display after another 5 minutes.
 #
 # Note that in the context of idle system power management, it is *NOT* a good
@@ -53,4 +56,5 @@ dunst &
 # (since a837fef). Instead use a wlr-output-power-management client such as
 # https://git.sr.ht/~leon_plickat/wlopm
 # swayidle -w timeout 600 ~/.config/scripts/LockScreen.sh >/dev/null 2>&1 &
+
 notify-send "Hola $USER..!"
