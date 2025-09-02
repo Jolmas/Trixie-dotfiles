@@ -40,7 +40,7 @@ nm-applet &
 copyq --start-server &
 
 # Launch worspaces on waybar.
-~/.config/scripts/wstmp.sh 1>/dev/null 2>&1 &
+~/.config/scripts/wstmp.sh 1 >/dev/null 2>&1 &
 
 # Enable notifications. Typically GNOME/KDE application notifications go
 # through the org.freedesktop.Notifications D-Bus API and require a client such
