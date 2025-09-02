@@ -9,7 +9,7 @@
 DESKTOP_NUM=$1
 
 # Define tus fondos de pantalla
-WALLPAPER_DIR="$HOME/Imágenes/Wallpapers" # Cambia esto a tu directorio de fondos
+WALLPAPER_DIR="$HOME/Pictures/Wallpapers" # Cambia esto a tu directorio de fondos
 WALLPAPER=""
 
 case "$DESKTOP_NUM" in
