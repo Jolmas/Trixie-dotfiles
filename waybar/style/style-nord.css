@@ -142,15 +142,15 @@ tooltip {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-#custom-ws1 {
+#custom-wsactive1 {
     color: #81a1c1; 
 }
-#custom-ws2 {
+#custom-wsactive2 {
     color: #81a1c1; 
 }
-#custom-ws3 {
+#custom-wsactive3 {
     color: #81a1c1; 
 }
-#custom-ws4 {
+#custom-wsactive4 {
     color: #81a1c1; 
 }

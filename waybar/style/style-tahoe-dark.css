@@ -156,3 +156,15 @@ tooltip label {
     animation-direction: alternate;
 }
 
+#custom-wsactive1 {
+    color: @foreground; 
+}
+#custom-wsactive2 {
+    color: @foreground; 
+}
+#custom-wsactive3 {
+    color: @foreground; 
+}
+#custom-wsactive4 {
+    color: @foreground; 
+}

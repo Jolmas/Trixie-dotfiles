@@ -168,15 +168,15 @@ tooltip label{
 #waybar.empty, #waybar.tiled, #waybar.floating {
     background-color: transparent;
 }
-#custom-ws1 {
+#custom-wsactive1 {
     color: #fefefe; 
 }
-#custom-ws2 {
+#custom-wsactive2 {
     color: #fefefe; 
 }
-#custom-ws3 {
+#custom-wsactive3 {
     color: #fefefe; 
 }
-#custom-ws4 {
+#custom-wsactive4 {
     color: #fefefe; 
 }
