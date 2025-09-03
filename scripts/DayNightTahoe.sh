@@ -23,7 +23,11 @@ day() {
     # Cambia el tema de Labwc al tema claro
     CURRENT_THEME=$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>" | awk -F"[><]" '{print $3}')
     sed -i "s/$CURRENT_THEME/Lab-Liquid-Glass/g" ~/.config/labwc/rc.xml
-    
+
+    # Establece el tema de Iconos y GTK claro
+	gsettings set org.gnome.desktop.interface gtk-theme MacTahoe-Light
+	gsettings set org.gnome.desktop.interface icon-theme MacTahoe-light
+	                
     # Establece el fondo de pantalla
     pkill swaybg
     swaybg -i "$WALLPAPERS/macOS_Tahoe_LightDefault.png" -m fill &
@@ -51,6 +55,10 @@ night() {
     CURRENT_THEME=$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>" | awk -F"[><]" '{print $3}')
     sed -i "s/$CURRENT_THEME/Lab-Liquid-Dark/g" ~/.config/labwc/rc.xml
     
+    # Establece el tema Iconos y GTK oscuro
+	gsettings set org.gnome.desktop.interface gtk-theme MacTahoe-Dark
+	gsettings set org.gnome.desktop.interface icon-theme MacTahoe-dark
+
     # Establece el fondo de pantalla
     pkill swaybg
     swaybg -i "$WALLPAPERS/macOS_Tahoe_DefaultDark.png" -m fill &
