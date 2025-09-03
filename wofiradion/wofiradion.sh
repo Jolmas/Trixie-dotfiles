@@ -1,27 +1,19 @@
 #!/bin/bash
-#       ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
+#        ╭───╮╭───╮╭───╮╭───╮╭───╮╭───╮
 #  WOFI │ R ││ A ││ D ││ I ││ O ││ N │
-#       ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
+#        ╰───╯╰───╯╰───╯╰───╯╰───╯╰───╯
 # A bash script written by Christos Angelopoulos, October 2023, under GPL v2
 # Modified for Wofi by Gemini and Jolmasch, August 2025
 
 EDITOR="$(grep 'Preferred_editor' "$HOME/.config/radion/radion.conf" | cut -d " " -f2)"
- 
-function random_station
-{
-    rand_max_lim=$(grep -v -E '^$|^//' "$1" | wc -l)
-    rand_station_index=$((1 + RANDOM % rand_max_lim))
-    STATION=$(grep -v -E '^$|^//' "$1" | head -"$rand_station_index" | tail -1 | awk '{print $2}' | sed 's/-/ /g;s/~//g')
-    STATION_URL="$(grep "~${STATION// /-}"~ "$1" | awk '{print $1}')"
-}
 
 function play_station
 {
-    echo "ESTACIÓN: $STATION"
-    echo "URL     : $STATION_URL"
+    echo "ESTACIÓN: $1"
+    echo "URL      : $2"
     pkill mpv
-    mpv "$STATION_URL"
-    sleep 10
+    mpv "$2" &
+    sleep 5
     pkill wofi
 }
 
@@ -37,7 +29,7 @@ function select_tag
     if [ -n "$TAGS" ]; then
         OPTIONS+="--- Etiquetas ---\n$TAGS\n"
     fi
-    OPTIONS+="--- Acciones ---\nTodas las Estaciones\nEditar Estaciones\nEstación Aleatoria\nApagar Radio\nPreferencias\nBuscar Estaciones\nSalir"
+    OPTIONS+="--- Acciones ---\nTodas las Estaciones\nEditar Estaciones\nApagar Radio\nPreferencias\nBuscar Estaciones\nSalir"
 
     SELECTION=$(echo -e "$OPTIONS" | wofi --show dmenu -p "Wofi Radion:")
 
@@ -50,11 +42,10 @@ function select_tag
             ;;
         "Estación Aleatoria")
             random_station "$HOME/.config/radion/stations.txt"
-            play_station
             ;;
         "Apagar Radio")
-        	pkill mpv
-        	;;
+            pkill mpv
+            ;;
         "Preferencias")
             foot $EDITOR "$HOME/.config/radion/radion.conf"
             ;;
@@ -66,18 +57,16 @@ function select_tag
             read -r
             ;;
         "Salir")
-        	exit 0
+            exit 0
             ;;
         "---"*)
-            # Ignorar líneas separadoras
             ;;
         *)
-            # Verificar si la selección es una estación favorita
             if grep -q "~${SELECTION// /-}"~ "$HOME/.config/radion/stations.txt"; then
-                STATION="$SELECTION"
-                STATION_URL="$(grep "~${STATION// /-}"~ "$HOME/.config/radion/stations.txt" | awk '{print $1}')"
-                play_station
-            # Verificar si la selección es una etiqueta
+                LINE=$(grep "~${SELECTION// /-}"~ "$HOME/.config/radion/stations.txt")
+                STATION=$(echo "$LINE" | awk '{print $2}' | sed 's/~//g;s/-/ /g')
+                STATION_URL=$(echo "$LINE" | awk '{print $1}')
+                play_station "$STATION" "$STATION_URL"
             elif grep -q "#$SELECTION" "$HOME/.config/radion/stations.txt"; then
                 select_station_from_file <(grep "#$SELECTION" "$HOME/.config/radion/stations.txt") "$SELECTION"
             fi
@@ -85,30 +74,40 @@ function select_tag
     esac
 }
 
+function random_station
+{
+    local FILE_PATH="$1"
+    local rand_max_lim=$(grep -v -E '^$|^//' "$FILE_PATH" | wc -l)
+    local rand_station_index=$((1 + RANDOM % rand_max_lim))
+    local LINE=$(grep -v -E '^$|^//' "$FILE_PATH" | head -"$rand_station_index" | tail -1)
+    local STATION=$(echo "$LINE" | awk '{print $2}' | sed 's/-/ /g;s/~//g')
+    local STATION_URL=$(echo "$LINE" | awk '{print $1}')
+    play_station "$STATION" "$STATION_URL"
+}
+
 function select_station_from_file
 {
     local FILE_PATH="$1"
     local PROMPT_TEXT="$2"
     local STATIONS=$(grep -v -E '^$|^//' "$FILE_PATH" | awk '{print $2}' | sed 's/~//g;s/-/ /g')
-    
+
     local SELECTION=$(echo -e "Estación Aleatoria\nAtrás\nSalir\n$STATIONS" | wofi --show dmenu -p "$PROMPT_TEXT:")
 
     case "$SELECTION" in
         "Estación Aleatoria")
-        	random_station "$FILE_PATH"
-            play_station
+            random_station "$FILE_PATH"
             ;;
         "Atrás")
-            # Volver al menú principal
+            return
             ;;
         "Salir")
             exit 0
             ;;
         *)
             if [ -n "$SELECTION" ]; then
-                STATION="$SELECTION"
-                STATION_URL="$(grep "~${STATION// /-}"~"$FILE_PATH" | awk '{print $1}')"
-                play_station
+                local LINE=$(grep "~${SELECTION// /-}"~ "$HOME/.config/radion/stations.txt")
+                local STATION_URL=$(echo "$LINE" | awk '{print $1}')
+                play_station "$SELECTION" "$STATION_URL"
             fi
             ;;
     esac
