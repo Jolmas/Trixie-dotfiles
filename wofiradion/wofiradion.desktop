@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=WofiRadion
+GenericName=WRadio Player
+GenericName[es_ES]=Reproductor de Radio
+Comment=Listen to radio
+Comment[es_ES]=Escuche la Radio
+Icon=gnome-music
+Exec=~/.local/bin/wofiradion.sh
+Terminal=false
+Categories=AudioVideo;Player;Radio;
