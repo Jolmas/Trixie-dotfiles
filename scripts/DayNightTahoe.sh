@@ -2,8 +2,6 @@
 
 # Directorios
 WALLPAPERS="$HOME/Imágenes/Wallpapers"
-AZOTEBG="$HOME/.azotebg"
-AZOTEMP="$HOME/.cache/temp_file"
 
 # Estilos de Waybar y scripts
 THEMES="$HOME/.config/waybar/style"
@@ -14,7 +12,7 @@ STATUS_FILE="/tmp/daynight_$(whoami)"
 STATUS=$(<"$STATUS_FILE")
 
 day() {
-    echo "Activando modo día..."
+	echo "Activando modo día..."
     
     # Enlaza los estilos de Waybar para el modo día
     ln -sf "$THEMES/style-tahoe.css" "$HOME/.config/waybar/style.css"
@@ -33,10 +31,12 @@ day() {
     swaybg -i "$WALLPAPERS/macOS_Tahoe_LightDefault.png" -m fill &
     
     # Actualiza el archivo de configuración de azote
+    local AZOTEBG="$HOME/.azotebg"
+	local AZOTEMP="$HOME/.cache/temp_file"
     sleep 0.5
     head -n 2 "$AZOTEBG" > "$AZOTEMP"
     cp "$AZOTEMP" "$AZOTEBG"
-    echo "swaybg -o 'VGA-1' -i \"$selected_wallpaper\" -m fill &" >> "$AZOTEBG"
+    echo "swaybg -o 'VGA-1' -i \"$WALLPAPERS/macOS_Tahoe_LightDefault.png\" -m fill &" >> "$AZOTEBG"
     
     # Escribe el nuevo estado (día) en el archivo de estado
     printf "%s" "0" > "$STATUS_FILE"
@@ -45,7 +45,7 @@ day() {
 }
 
 night() {
-    echo "Activando modo noche..."
+	echo "Activando modo noche..."
     
     # Enlaza los estilos de Waybar para el modo noche
     ln -sf "$THEMES/style-tahoe-dark.css" "$HOME/.config/waybar/style.css"
@@ -64,10 +64,12 @@ night() {
     swaybg -i "$WALLPAPERS/macOS_Tahoe_DefaultDark.png" -m fill &
     
     # Actualiza el archivo de configuración de azote
+    local AZOTEBG="$HOME/.azotebg"
+    local AZOTEMP="$HOME/.cache/temp_file"
     sleep 0.5
     head -n 2 "$AZOTEBG" > "$AZOTEMP"
     cp "$AZOTEMP" "$AZOTEBG"
-    echo "swaybg -o 'VGA-1' -i \"$selected_wallpaper\" -m fill &" >> "$AZOTEBG"
+    echo "swaybg -o 'VGA-1' -i \"$WALLPAPERS/macOS_Tahoe_DefaultDark.png\" -m fill &" >> "$AZOTEBG"
     
     # Escribe el nuevo estado (noche) en el archivo de estado
     printf "%s" "1" > "$STATUS_FILE"
