@@ -52,6 +52,7 @@ install() {
 install "$src" "$dest"
 chmod +x ~/.config/scripts/*
 cp ~/.config/scripts/azotebg ~/.azotebg
+tar -zxvf rofi.tar.gz -C ~/.config
 
 echo ""
 echo "Installation complete! 🎉"
