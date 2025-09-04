@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Directorios
-WALLPAPERS="$HOME/Imágenes/Wallpapers"
+WALLPAPERS="$HOME/Pictures/Wallpapers"
 
 # Estilos de Waybar y scripts
 THEMES="$HOME/.config/waybar/style"
