@@ -23,7 +23,7 @@ menu(){
   printf "3. Tokyo-Night\n"
   printf "4. Arc-Light\n"
   printf "5. Drak-Thin\n"
-  printf "6. Dark-Thin\n"
+  printf "6. W11-Silver\n"
   printf "7. W10\n"
   printf "8. Mac-Light\n"
   printf "9. Dracula\n"
@@ -104,7 +104,7 @@ main() {
         6)
 	        ln -sf $THEMES/style-default_alter.css "$HOME/.config/waybar/style.css"
     	    ln -sf $THEMES/style-default_alter.css "$HOME/.config/waybar/style-default.css"
-			sed -i "s/$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>"| awk -F"[><]" '{print $3}')/Lab-Light/g" ~/.config/labwc/rc.xml
+			sed -i "s/$(grep "<theme>" ~/.config/labwc/rc.xml -A 5 | grep "<name>"| awk -F"[><]" '{print $3}')/Lab-W11-Silver/g" ~/.config/labwc/rc.xml
 			restart
             ;;
         7)
