@@ -69,7 +69,7 @@ wstmp.sh
 
 `temaico.sh` = Load icons settings at startup
 
-`getnf` = Install Nerd Fonts needed for Wayland icons (Hack - JetBrainsMono)
+`getnf` = Install Nerd Fonts needed for Wayland icons (Hack - JetBrainsMono, require: curl)
 
 ## Required Packages
 
