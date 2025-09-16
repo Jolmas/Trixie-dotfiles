@@ -86,4 +86,6 @@ wstmp.sh
 - `foot`
 - `micro`
 - `wtype`
--  Download and install the Themes LabWC `git clone https://github.com/Jolmas/LabWC.git`
+- ` pipewire`
+-  Download and install the Themes LabWC https://github.com/Jolmas/LabWC.git
+- Download and install the Icon Themes https://github.com/vinceliuice/MacTahoe-icon-theme.git
