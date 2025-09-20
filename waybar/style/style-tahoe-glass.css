@@ -1,0 +1,167 @@
+@import url("./style/colors-mocha.css");
+*{
+font-family: "Hack Nerd Font";
+font-weight: bold;
+min-height: 0;
+/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+font-size: 98%;
+font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+padding: 1px;
+margin-top: 1px;
+margin-bottom: 1px;
+margin-left: 1px;
+margin-right: 1px;
+}
+
+window#waybar {
+    background: rgba(221, 227, 243, 0);
+    border-radius: 8px;
+    color: #000000;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #8fd1eb;
+}
+
+window#waybar.hidden {
+    opacity: 0.5;
+}
+   
+tooltip {
+    background: #abb8c8;
+	border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #8fd1eb;
+}
+
+tooltip label {
+	color: #000000;
+}
+
+/*-----module groups----*/
+.modules-right {
+	border-radius: 4px;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.modules-center {
+	border-radius: 4px;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.modules-left {
+    border-radius: 4px;
+    padding: 1px;
+    margin: 0px 0px 0px 0px;
+}
+
+#workspaces button {
+    padding: 2px;
+    background: transparent;
+    color: black;
+    margin: 1px;
+}
+   
+#workspaces button.active {
+    color: #d7d7d7;
+    border-radius: 4px;
+    padding: 1px;
+    margin: 0px;
+}
+  
+#workspaces button.focused {
+    color: #64727d;
+	padding: 0px 0px;
+    margin: 1 0 0 1;
+}
+
+#taskbar button.active {
+    background-color: rgba(64, 122, 149, 0.4);
+    border-radius: 8px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+ }
+   
+#workspaces button.urgent {
+    color: #11111b;
+    border-radius: 4px;
+}
+       
+#workspaces button:hover {
+    color: #57b5f3;
+    border-radius: 2px;
+}
+   
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#network,
+#pulseaudio,
+#wireplumber,
+#mode,
+#tray,
+#cava,
+#backlight,
+#window,
+#idle_inhibitor,
+#keyboard-state,
+#keyboard-state label,
+#keyboard-state label.locked,
+#mpd,
+#bluetooth,
+#taskbar,
+#taskbar button,
+#workspaces,
+#custom-light_dark,
+#custom-updater,
+#custom-menu,
+#custom-cycle_wall,
+#custom-power,
+#custom-spotify,
+#custom-weather,
+#custom-power,
+#custom-lock,
+#custom-weather.severe,
+#custom-weather.sunnyDay,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.default 
+#custom-wsactive1,
+#custom-wsactive2,
+#custom-wsactive3,
+#custom-wsactive4,
+#idle_inhibitor {
+    color:#000000;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+     
+#temperature.critical {
+    background-color: #ff0000;
+}
+   
+@keyframes blink {
+    to {
+    color: #000000;
+       }
+}
+   
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+   
