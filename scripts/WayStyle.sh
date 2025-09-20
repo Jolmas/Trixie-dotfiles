@@ -37,7 +37,9 @@ menu(){
   printf "17. simple\n"
   printf "18. tahoe-dark\n"
   printf "19. tahoe\n"
-
+  printf "20. hifi\n"
+  printf "21. tahoe-glass\n"
+  printf "22. tahoe-glass-dark\n"
 }
 
 restart() {
@@ -143,7 +145,22 @@ main() {
 	        ln -sf $THEMES/style-tahoe.css "$HOME/.config/waybar/style.css"
     	    ln -sf $THEMES/style-tahoe.css "$HOME/.config/waybar/style-default.css"
 			restart
+			;;
+        20)
+	        ln -sf $THEMES/style-hifi.css "$HOME/.config/waybar/style.css"
+    	    ln -sf $THEMES/style-hifi.css "$HOME/.config/waybar/style-default.css"
+			restart
             ;;
+        21)
+	        ln -sf $THEMES/style-tahoe-glass.css "$HOME/.config/waybar/style.css"
+    	    ln -sf $THEMES/style-tahoe-glass.css "$HOME/.config/waybar/style-default.css"
+			restart
+			;;
+        22)
+	        ln -sf $THEMES/style-tahoe-glass-dark.css "$HOME/.config/waybar/style.css"
+    	    ln -sf $THEMES/style-tahoe-glass-dark.css "$HOME/.config/waybar/style-default.css"
+			restart
+			;;
         *)
             ;;
     esac
