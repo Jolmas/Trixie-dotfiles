@@ -1,0 +1,170 @@
+@import url("./style/colors-mocha.css");
+*{
+font-family: "Hack Nerd Font";
+font-weight: bold;
+min-height: 0;
+/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+font-size: 98%;
+font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+padding: 1px;
+margin-top: 1px;
+margin-bottom: 1px;
+}
+
+window#waybar {
+    background: rgba(136, 115, 122, 0.4);
+    border-radius: 10px;
+    color: #262626;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ab5629;
+}
+
+window#waybar.hidden {
+    opacity: 0.5;
+}
+   
+tooltip {
+    background: #88737A;
+	border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ab5629;
+}
+
+tooltip label {
+	color: #f3f3f3;
+}
+
+/*-----module groups----*/
+.modules-right > widget:last-child > #worspaces {
+    margin-right: 0;	
+}
+
+.modules-left > widget:last-child > #worspaces {
+    margin-right: 0;	
+}
+
+#workspaces button {
+    padding: 2px;
+    background: transparent;
+    color: black;
+    margin: 1px;
+}
+   
+#workspaces button.active {
+    color: #14adff;
+    border-radius: 15px 15px 15px 15px;
+    padding: 1px;
+    margin: 0px;
+    
+}
+  
+#workspaces button.focused {
+    color: #64727d;
+    padding: 1px;
+    margin: 0px;
+    
+}
+
+#taskbar button.active {
+    background-color: #14adff;
+    padding: 0px;
+    margin: 0px; 
+}
+   
+#workspaces button.urgent {
+    color: #11111b;
+    border-radius: 10px;
+}
+       
+#workspaces button:hover {
+    color: #14adff;
+    border-radius: 8px;
+}
+   
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#network,
+#pulseaudio,
+#wireplumber,
+#mode,
+#tray,
+#cava,
+#backlight,
+#window,
+#idle_inhibitor,
+#keyboard-state,
+#keyboard-state label,
+#keyboard-state label.locked,
+#mpd,
+#bluetooth,
+#taskbar,
+#taskbar button,
+#workspaces,
+#custom-light_dark,
+#custom-updater,
+#custom-ws1,
+#custom-ws2,
+#custom-ws3,
+#custom-ws4,
+#custom-menu,
+#custom-cycle_wall,
+#custom-power,
+#custom-spotify,
+#custom-weather,
+#custom-power,
+#custom-lock,
+#custom-weather.severe,
+#custom-weather.sunnyDay,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.default
+#custom-workspaces,
+#idle_inhibitor {
+    border-radius: 6px;
+    padding: 0px;
+    margin: 0px;
+    color:#fefefe;
+}
+     
+#temperature.critical {
+    background-color: #ff0000;
+}
+   
+@keyframes blink {
+    to {
+    color: #000000;
+       }
+}
+       
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-wsactive1 {
+    color: @foreground; 
+}
+#custom-wsactive2 {
+    color: @foreground; 
+}
+#custom-wsactive3 {
+    color: @foreground; 
+}
+#custom-wsactive4 {
+    color: @foreground; 
+}
