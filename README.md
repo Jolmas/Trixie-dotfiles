@@ -21,13 +21,15 @@ chmod +x install.sh
 
 #### Scripts used by Waybar
 
-`GrimShot.sh` = Screenshot (require: grim, slurp, swaymsg, wl-copy, jq and notify-send)
+`GrimShot.sh` = Screenshot
 
 `LabwcTheme.sh`= Theme Changer
 
 `LockScreen.sh` = Screen locker
 
 `Volume.sh` = Volume manager
+
+`xupdate` Search and apply updates
 
 **Trick for Workspaces on Waybar**
 
@@ -39,7 +41,6 @@ wsactive3.sh
 wsactive4.sh
 wstmp.sh
 ```
-`xupdate` Search and apply updates (require: nala)
 
 #### Scripts used by LabWC
 
@@ -47,17 +48,17 @@ wstmp.sh
 
 `Labcmd.sh` = Show LabWC active command keybinds
 
-`WpSel.sh` = Change Wallpaper (require: ImageMagick, create directory ~/Pictures/Wallpapers and copy your images inside)
+`WpSel.sh` = Change Wallpaper (create a directory ~/Pictures/Wallpapers and copy your images inside)
 
 `ScreenShot.sh` = Screenshooter
 
 `wofi-light.sh` = Launch wofi
  
-`ShowDesk.sh` = Minimize all windows (require: wlrctl)
+`ShowDesk.sh` = Minimize all windows (require: [wlrctl](https://git.sr.ht/~brocellous/wlrctl))
 
 `update-lwmenu.sh` = Launch update-menu.sh saving to ~/config/labwc/menu.xml 
 
-`update-menu.sh` = Update menu with presets (require: labwc-menu-generator)
+`update-menu.sh` = Update menu with presets (require: [labwc-menu-generator](https://github.com/labwc/labwc-menu-generator.git))
 
 `WayStyle.sh` = Change waybar style
 
@@ -69,23 +70,14 @@ wstmp.sh
 
 `temaico.sh` = Load icons settings at startup
 
-`getnf` = Install Nerd Fonts needed for Wayland icons (Hack - JetBrainsMono, require: curl)
+`getnf` = Install Nerd Fonts needed for Wayland icons (Hack - JetBrainsMono)
 
 ## Required Packages
+1. Install the packages:
 
-- `labwc`
-- `dunst`
-- `swaylock`
-- `swaybg`
-- `rofi`
-- `waybar`
-- `wlogout`
-- `wofi`
-- `copyq`
-- `wlsunset`
-- `foot`
-- `micro`
-- `wtype`
-- `pipewire`
--  Download and install the Themes LabWC https://github.com/Jolmas/LabWC.git
-- Download and install the Icon Themes https://github.com/vinceliuice/MacTahoe-icon-theme.git
+`
+sudo apt install labwc dunst swaylock swaybg rofi waybar wlogout wofi copyq wlsunset foot micro wtype pipewire grim slurp wl-clipboard jq libnotify-bin nala imagemagick curl
+`
+
+2. Download and install the [Themes LabWC](https://github.com/Jolmas/LabWC.git)
+3. Download and install the [MacTahoe Icons](https://github.com/vinceliuice/MacTahoe-icon-theme.git)
