@@ -76,7 +76,7 @@ wstmp.sh
 1. Install the packages:
 
 `
-sudo apt install labwc dunst swaylock swaybg rofi waybar wlogout wofi copyq wlsunset foot micro wtype pipewire grim slurp wl-clipboard jq libnotify-bin nala imagemagick curl
+sudo apt install labwc dunst swaylock swaybg rofi waybar wlogout wofi copyq wlsunset foot micro wtype pipewire grim slurp wl-clipboard jq libnotify-bin nala imagemagick curl xmlstarlet
 `
 
 2. Download and install the [Themes LabWC](https://github.com/Jolmas/LabWC.git)
