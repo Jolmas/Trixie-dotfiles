@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WALLPAPERS="/home/luis/Imágenes/Wallpapers"
+WALLPAPERS="$HOME/Pictures/Wallpapers"
 
 while true; do
   ALIST=( `ls -w1 "$WALLPAPERS"` )

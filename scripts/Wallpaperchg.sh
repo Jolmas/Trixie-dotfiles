@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WALLPAPERS="$HOME/Imágenes/Wallpapers"
+WALLPAPERS=$HOME/Pictures/Wallpapers
 ALIST=( `ls -w1 $WALLPAPERS` )
 RANGE=${#ALIST[@]}
 let "number = 0"

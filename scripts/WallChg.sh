@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # WALLPAPERS PATH
-DIR="$HOME/Imágenes/Wallpapers"
+DIR="$HOME/Pictures/Wallpapers"
 
 # wofi window config (in %)
 WIDTH=25

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-WALLPAPER_DIR="$HOME/Imágenes/Wallpapers"
+WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 CACHE_FILE="$HOME/.cache/wlpaper-index.txt"
 WOFI_CONFIG="$HOME/.config/wofi/config-main"
 AZOTEBG="$HOME/.azotebg"
