@@ -43,7 +43,7 @@ install() {
 # --- Run installation ---
 install "$src" "$dest"
 chmod +x wofiradion.sh
-cp  wofiradion.sh ~/.local/bin
+cp  wofiradion.sh ~/.local/bin/wofiradion.sh
 cp  wofiradion.desktop ~/.local/share/applications
 
 echo ""
