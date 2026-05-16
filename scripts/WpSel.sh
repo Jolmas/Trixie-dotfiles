@@ -106,19 +106,42 @@ selected_wallpaper="${WALLPAPER_PATHS[$SELECTED_INDEX]}"
 if [[ -f "$selected_wallpaper" ]]; then
     echo "$SELECTED_INDEX" > "$CACHE_FILE"
 
- 
+    # Detect active output (VGA-1 or eDP-1)
+    # If swaymsg is available, we use it to find which one is active.
+    # Otherwise, we apply to all outputs (*) for maximum compatibility.
+    TARGET_OUT="*"
+    if command -v swaymsg >/dev/null; then
+        if swaymsg -t get_outputs | grep -q "VGA-1"; then
+            TARGET_OUT="VGA-1"
+        elif swaymsg -t get_outputs | grep -q "eDP-1"; then
+            TARGET_OUT="eDP-1"
+        fi
+    fi
+
     # Apply wallpaper with optimized transitions
-	pkill swaybg
-	sleep 0.5
-    swaybg -o 'VGA-1' -i "$selected_wallpaper" -m fill &
-	sleep 0.5
-    head -n 2 $AZOTEBG > $AZOTEMP
-    cp $AZOTEMP $AZOTEBG
-	echo "swaybg -o 'VGA-1' -i "$selected_wallpaper" -m fill &" >> $AZOTEBG
+    pkill swaybg
+    sleep 0.5
+    
+    if [ "$TARGET_OUT" = "*" ]; then
+        swaybg -i "$selected_wallpaper" -m fill &
+    else
+        swaybg -o "$TARGET_OUT" -i "$selected_wallpaper" -m fill &
+    fi
+    
+    sleep 0.5
+    if [ -f "$AZOTEBG" ]; then
+        head -n 2 "$AZOTEBG" > "$AZOTEMP"
+        cp "$AZOTEMP" "$AZOTEBG"
+        if [ "$TARGET_OUT" = "*" ]; then
+            echo "swaybg -i \"$selected_wallpaper\" -m fill &" >> "$AZOTEBG"
+        else
+            echo "swaybg -o '$TARGET_OUT' -i \"$selected_wallpaper\" -m fill &" >> "$AZOTEBG"
+        fi
+    fi
 	
     # Lightweight notification
     notify-send -t 3000 "Wallpaper" "$(basename "$selected_wallpaper")"
 
     # Apply colors (async to avoid blocking)
-    	sleep 0.2
+    sleep 0.2
 fi
