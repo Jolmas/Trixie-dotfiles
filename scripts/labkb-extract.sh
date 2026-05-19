@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Configuración de archivos (puedes pasarlos como argumentos)
+# Configure files
 INPUT_FILE=${1:-"rc.xml"}
 OUTPUT_FILE=${2:-"labwc-kbinds.txt"}
 
