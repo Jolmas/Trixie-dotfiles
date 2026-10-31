@@ -14,6 +14,7 @@ Install all of the [required packages](#required-packages). Then, run the instal
 
 ```
 git clone https://github.com/Jolmas/Trixie-dotfiles.git
+cd Trixie-dotfiles
 chmod +x install.sh
 ./install.sh
 ```
