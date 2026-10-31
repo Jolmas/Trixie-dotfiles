@@ -13,6 +13,7 @@ The version used in this installation is [Debian 13 Live XFCE](https://cdimage.d
 Install all of the [required packages](#required-packages). Then, run the install script.
 
 ```
+git clone https://github.com/Jolmas/Trixie-dotfiles.git
 chmod +x install.sh
 ./install.sh
 ```
